@@ -5,6 +5,8 @@
  */
 package napakalaki;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author carlos
@@ -23,16 +25,53 @@ public class BadConsequence {
     
     //Constructores
     public BadConsequence(String text, int levels, int nVisible, int nHidden){
-        // NO SE COMO RELLENAR
+        setText(text);
+        setLevels(levels);
+        setNVisibleTreasures(nVisible);
+        setNHiddenTreasures(nHidden);
     }
     
     public BadConsequence(String text, boolean death){
-        // NO SE COMO RELLENAR
+        setText(text);
+        setDeath(death);
     }
     
     public BadConsequence(String text, int levels, ArrayList<TreasureKind> tVisible,
     ArrayList<TreasureKind> tHidden){
-        // NO ENTIENDO FUNCIONAMIENTO
+        setText(text);
+        setLevels(levels);
+        setSpecificVisibleTreasures(tVisible);
+        setSpecificHiddenTreasures(tHidden);
+        
+    }
+    
+    // Modificadores
+    private void setText(String txt){
+        text = txt;
+    }
+    
+    private void setLevels(int lv){
+        levels = lv;
+    }
+    
+    private void setNVisibleTreasures(int nvt){
+        nVisibleTreasures = nvt;
+    }
+    
+    private void setNHiddenTreasures(int nht){
+        nHiddenTreasures = nht;
+    }
+    
+    private void setDeath(boolean dth){
+        death = dth;
+    }
+    
+    private void setSpecificHiddenTreasures(ArrayList<TreasureKind> tHidden){
+        specificHiddenTreasures = tHidden;
+    }
+    
+    private void setSpecificVisibleTreasures(ArrayList<TreasureKind> tVisible){
+        specificVisibleTreasures = tVisible;
     }
     
     // Consultores

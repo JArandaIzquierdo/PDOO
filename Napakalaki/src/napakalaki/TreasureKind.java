@@ -9,11 +9,6 @@ package napakalaki;
  *
  * @author carlos
  */
-public enum TreasureKind {
-    ARMOR,
-    ONEHAND,
-    BOTHHANDS,
-    HELMET,
-    SHOES;
-    // NO ESTOY 100% SEGURO DE SI NECESITAN VALORES O NO
+public enum TreasureKind { 
+    ARMOR, ONEHAND, BOTHHANDS, HELMET, SHOES   
 }

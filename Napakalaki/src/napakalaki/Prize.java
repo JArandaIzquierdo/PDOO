@@ -14,18 +14,18 @@ public class Prize {
     private int treasures;
     private int level;
     
-    // Clases y métodos públicos
+    // Constructor y métodos públicos
     public Prize(int treasures, int level){ //Clase Premio
-        setTreasures(treasures);    // ¡PROBLEMAS QUE NO ENTIENDO!
-        setLevel(level);            // ¡PROBLEMAS QUE NO ENTIENDO!
+        setTreasures(treasures);    
+        setLevel(level);
     }
     
     // Modificadores
-    public void setTreasures(int tr){   //Modificador de Treasures
+    private void setTreasures(int tr){   //Modificador de Treasures
         treasures = tr;
     }
     
-    public void setLevel(int lv){   //Modificador de Level
+    private void setLevel(int lv){   //Modificador de Level
         level = lv;
     }
     
@@ -36,5 +36,11 @@ public class Prize {
     
     public int getLevel(){  //Consultor de Level
         return level;
+    }
+    
+    // Método toString
+    @Override
+    public String toString(){
+        return " levels = " + Integer.toString(level) + Integer.toString(treasures) + "Treasures = ";
     }
 }
