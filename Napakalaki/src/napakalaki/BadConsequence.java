@@ -21,7 +21,7 @@ public class BadConsequence {
     
     private ArrayList<TreasureKind> specificHiddenTreasures = new ArrayList();
     private ArrayList<TreasureKind> specificVisibleTreasures = new ArrayList();
-    //NO LOS ENTIENDO EL FUNCIONAMIENTO
+    
     
     //Constructores
     public BadConsequence(String text, int levels, int nVisible, int nHidden){
@@ -93,5 +93,14 @@ public class BadConsequence {
     
     public boolean getDeath(){
         return death;
+    }
+    
+    // Método toString
+    @Override   //Estamos sobreescibribiendo un método padre de Java
+    public String toString(){
+        return " Text = " + text + "Levels = " + Integer.toString(levels)
+                + "NVisibleTreasures = " + Integer.toString(nVisibleTreasures)
+                + "NHiddenTreasures = " + Integer.toString(nHiddenTreasures)
+                + "Death = " + death;
     }
 }
