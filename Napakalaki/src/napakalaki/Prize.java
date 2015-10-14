@@ -41,6 +41,6 @@ public class Prize {
     // Método toString
     @Override   //Estamos sobreescibribiendo un método padre de Java
     public String toString(){
-        return " levels = " + Integer.toString(level) + "Treasures = " + Integer.toString(treasures);
+        return " levels = " + Integer.toString(level) + " Treasures = " + Integer.toString(treasures);
     }
 }

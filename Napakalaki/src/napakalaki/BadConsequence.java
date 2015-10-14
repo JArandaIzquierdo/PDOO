@@ -98,9 +98,9 @@ public class BadConsequence {
     // Método toString
     @Override   //Estamos sobreescibribiendo un método padre de Java
     public String toString(){
-        return " Text = " + text + "Levels = " + Integer.toString(levels)
-                + "NVisibleTreasures = " + Integer.toString(nVisibleTreasures)
-                + "NHiddenTreasures = " + Integer.toString(nHiddenTreasures)
-                + "Death = " + death;
+        return " Text = " + text + " Levels = " + Integer.toString(levels)
+                + " NVisibleTreasures = " + Integer.toString(nVisibleTreasures)
+                + " NHiddenTreasures = " + Integer.toString(nHiddenTreasures)
+                + " Death = " + death;
     }
 }

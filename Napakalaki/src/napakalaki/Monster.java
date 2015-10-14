@@ -53,7 +53,7 @@ public class Monster {
     // Método toString
     @Override   //Estamos sobreescibribiendo un método padre de Java
     public String toString(){
-        return " Name = " + name + "Levels = " + Integer.toString(combatLevel);
+        return " Name = " + name + " Levels = " + Integer.toString(combatLevel);
     }
     
     
