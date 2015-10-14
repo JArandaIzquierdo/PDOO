@@ -55,6 +55,10 @@ public class PruebaNapakalaki2 {
         //Añadimos el monstruo
         monstruos.add(new Monster("Angel de la noche ibicenca",14,badConsequence,prize));
         
+        // Holaaa prueba 
+        
+        
+        
         
     
     }
