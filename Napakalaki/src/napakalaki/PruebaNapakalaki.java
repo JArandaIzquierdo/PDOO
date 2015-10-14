@@ -40,6 +40,26 @@ public class PruebaNapakalaki {
         prize= new Prize(2,1);
         monstruos.add(new Monster("3 Byakhees de bonanza", 10, badConsequence, prize));
         
+        /*
+        //////////////////////////////////////////////////
+        */
+        // Consulta Monstruos con nivel igual o superior a 10
+        System.out.println("Monstruos con nivel igual o superior a 10");
+        for(Monster m: monstruos){
+            if(m.getCombatLevel()>9){
+                System.out.println(m.toString());
+            }
+          
+        }
+        // Consulta Monstruos que tengan un mal rollo que implique sólo pérdida de niveles.
+        System.out.println("Monstruos que tengan un mal rollo que implique sólo pérdida de niveles.");
+        for(Monster m: monstruos){
+            if(m.badConsequence.get){
+                System.out.println(m.toString());
+            }
+          
+        }
+        
     }
     
 }
