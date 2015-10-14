@@ -24,7 +24,7 @@ public class PruebaNapakalaki2 {
     
     
     public static void main(String[] args) {
-        
+        //asnfoadfn
         
         // Array para los monstruos
         ArrayList<Monster> monstruos = new ArrayList();
