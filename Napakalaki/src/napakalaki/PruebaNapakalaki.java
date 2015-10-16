@@ -54,7 +54,7 @@ public class PruebaNapakalaki {
         // Consulta Monstruos que tengan un mal rollo que implique sólo pérdida de niveles.
         System.out.println("Monstruos que tengan un mal rollo que implique sólo pérdida de niveles.");
         for(Monster m: monstruos){
-            if(m.badConsequence.get){
+            if(m.badConsequence.getxd){
                 System.out.println(m.toString());
             }
           
