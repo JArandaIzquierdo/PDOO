@@ -50,6 +50,14 @@ public class Monster {
         return combatLevel;
     }
     
+    public BadConsequence getBadConsequence(){  //Consultor de BadConsequence
+        return bc;
+    }
+    
+    public Prize getPrize(){  //Consultor de Prize
+        return price;
+    }
+    
     // Método toString
     @Override   //Estamos sobreescibribiendo un método padre de Java
     public String toString(){
