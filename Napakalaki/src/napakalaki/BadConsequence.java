@@ -25,7 +25,7 @@ public class BadConsequence {
     
     //Constructores de mal rollo
     
-    //Constructor para mal rollo sin especificar 
+    //Constructor para mal rollo que especifica cuantos tesoros visibles y ocultos pierdes
     public BadConsequence(String text, int levels, int nVisible, int nHidden){
         setText(text);
         setLevels(levels);
@@ -33,11 +33,13 @@ public class BadConsequence {
         setNHiddenTreasures(nHidden);
     }
     
+    // Constructor del mal rollo si mueres
     public BadConsequence(String text, boolean death){
         setText(text);
         setDeath(death);
     }
     
+    //Constructor para mal rollo que te quita los tipos de tesoros
     public BadConsequence(String text, int levels, ArrayList<TreasureKind> tVisible,
     ArrayList<TreasureKind> tHidden){
         setText(text);

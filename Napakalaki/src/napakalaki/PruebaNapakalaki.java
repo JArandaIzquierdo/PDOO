@@ -88,7 +88,7 @@ public class PruebaNapakalaki {
         monstruos.add(new Monster("Angel de la noche ibicenca",14,badConsequence,prize));
         
         //Creacion Monstruo "Los hondos"
-        baonstruos resultan bastante superficiales y te aburren mortalmente. Estas muerto", , nVisible, nHidden)
+        //baonstruos resultan bastante superficiales y te aburren mortalmente. Estas muerto", , nVisible, nHidden)
         
         /* CONSULTORES */
         
