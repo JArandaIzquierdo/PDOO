@@ -88,7 +88,22 @@ public class PruebaNapakalaki {
         monstruos.add(new Monster("Angel de la noche ibicenca",14,badConsequence,prize));
         
         //Creacion Monstruo "Los hondos"
-        //baonstruos resultan bastante superficiales y te aburren mortalmente. Estas muerto", , nVisible, nHidden)
+        badConsequence = new BadConsequence("Estos monstruos resultan bastante superficiales y te aburren mortalmente. Estas muerto", true);
+        prize = new Prize(2, 1);
+        monstruos.add(new Monster("Los hondos", 8, badConsequence, prize));
+        
+        //Creacion Monstruo "Pollipolipo volante"
+        badConsequence = new BadConsequence("Da mucho asquito", 3, 0, 0);
+        prize = new Prize(1,1);
+        monstruos.add(new Monster("Pollipolipo volante", 3, badConsequence, prize));
+        
+        //Creacion Monstruo "Familia Feliz"
+        badConsequence = new BadConsequence("La familia te atrapa. Estas muerto", true);
+        prize = new Prize(4, 1);
+        monstruos. add(new Monster("Familia Feliz", 1, badConsequence, prize));
+        
+        // Creacion Monstruo "Chibithulhu"
+        badConsequence = new BadConsequence("Embobados con el lindo primigenio te descartas de tu casco visible", 0, null, null)
         
         /* CONSULTORES */
         
