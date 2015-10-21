@@ -6,11 +6,14 @@ class BadConsequence
   
   def initialize(aText, someLevels, someVisibleTreasures, someHiddenTreasures,
     someSpecificVisibleTreasures, someSpecificHiddenTreasures, death)
-    @text    # Mensaje de mal rollo
-    @levels  # Level que se pierden
-    @nVisibleTreasures  # Nº tesoros visibles que se pierden
-    @nHiddenTreasures   # Nº tesoros ocultos que se pierden
-    @death   # Indica si muere el jugador o no
+    @text=aText    # Mensaje de mal rollo
+    @levels=someLevels  # Level que se pierden
+    @nVisibleTreasures=someVisibleTreasures  # Nº tesoros visibles que se pierden
+    @nHiddenTreasures=someHiddenTreasures   # Nº tesoros ocultos que se pierden
+    @someVisibleTreasures=someSpecificVisibleTreasures
+    @someHiddenTreasures=someSpecificHiddenTreasures
+    @death=death   # Indica si muere el jugador o no
+    
     
     #private ArrayList<TreasureKind> specificHiddenTreasures = new ArrayList();
     #private ArrayList<TreasureKind> specificVisibleTreasures = new ArrayList();

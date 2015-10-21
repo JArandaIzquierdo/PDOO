@@ -7,13 +7,14 @@ require_relative "prize"
 require_relative "monster"
 
 buen_rollo = Prize.new(2,7)
-mal_rollo = BadConsequence.new("Pringao",10,2,3)
+mal_rollo = BadConsequence.new("Pringao",10,2,3,Array.new,Array.new,false)
 monstruo = Monster.new("Monstruo",100,mal_rollo,buen_rollo)
 
 
 puts "Prueba Prize:"
-puts buen_rollo
+print buen_rollo.treasures," "
+puts buen_rollo.level
 puts "Prueba BadConsequence:"
-puts mal_rollo
+puts mal_rollo.text
 puts "Prueba Monstruo"
-puts monstruo
+puts monstruo.combatLevel
