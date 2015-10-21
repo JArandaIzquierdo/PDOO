@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package napakalaki;
 
 import java.util.ArrayList;
@@ -10,7 +5,7 @@ import java.util.Arrays;
 
 /**
  *
- * @author JaviAir
+ * @author Javi y Carlos
  */
 public class PruebaNapakalaki {
 
@@ -110,19 +105,19 @@ public class PruebaNapakalaki {
         
         // Creacion Monstruo "Bicigooth"
         badConsequence = new BadConsequence("Sientes bichos bajo la ropa. Descarta la armadura visible", 0,
-                new ArrayList(Arrays.asList(TreasureKind.ARMOR)), null);
+                new ArrayList(Arrays.asList(TreasureKind.ARMOR)), new ArrayList(Arrays.asList()));
         prize = new Prize(1,1);
         monstruos.add(new Monster("Bicigooth", 2, badConsequence, prize));
         
         //Creacion Monstruo "Roboggoth"
         badConsequence = new BadConsequence("La quinta directiva primaria te obliga a perder 2 niveles y un tesoro 2 manos visible",
-                2, new ArrayList(Arrays.asList(TreasureKind.BOTHHANDS)), null);
+                2, new ArrayList(Arrays.asList(TreasureKind.BOTHHANDS)), new ArrayList(Arrays.asList()));
         prize = new Prize(2,1);
         monstruos.add(new Monster("Roboggoth", 8, badConsequence, prize));
         
         //Creacion Monstruo "Bicefalo"
         badConsequence = new BadConsequence("Te faltan manos para tanta cabeza. Pierde 3 niveles y tus tesoros visibles de las manos",
-                3, new ArrayList(Arrays.asList(TreasureKind.BOTHHANDS,TreasureKind.ONEHAND)), null);
+                3, new ArrayList(Arrays.asList(TreasureKind.BOTHHANDS,TreasureKind.ONEHAND)),new ArrayList(Arrays.asList()));
         prize = new Prize(1,1);
         monstruos.add(new Monster("Bicefalo", 20, badConsequence, prize));
         
