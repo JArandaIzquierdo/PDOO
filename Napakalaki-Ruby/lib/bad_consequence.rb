@@ -4,7 +4,7 @@
 
 class BadConsequence
   
-  initialize(aText, someLevels, someVisibleTreasures, someHiddenTreasures,
+  def initialize(aText, someLevels, someVisibleTreasures, someHiddenTreasures,
     someSpecificVisibleTreasures, someSpecificHiddenTreasures, death)
     @text    # Mensaje de mal rollo
     @levels  # Level que se pierden
@@ -14,7 +14,8 @@ class BadConsequence
     
     #private ArrayList<TreasureKind> specificHiddenTreasures = new ArrayList();
     #private ArrayList<TreasureKind> specificVisibleTreasures = new ArrayList();
-  
+    #Array.new
+  end
   
   #Consultores
   attr_reader:text
