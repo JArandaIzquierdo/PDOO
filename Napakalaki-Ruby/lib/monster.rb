@@ -2,6 +2,9 @@
 # To change this template file, choose Tools | Templates
 # and open the template in the editor.
 
+require_relative "prize"
+require_relative "bad_consequence"
+
 class Monster
   
   def initialize(name,combatLevel,bc,price)
@@ -12,9 +15,9 @@ class Monster
   end
   
   #Consultores
-  Monster attr_reader:name
-  Monster attr_reader:combatLevel
-  Monster attr_reader:bc
-  Monster attr_reader:price
+  attr_reader:name
+  attr_reader:combatLevel
+  attr_reader:bc
+  attr_reader:price
   
 end
