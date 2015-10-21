@@ -103,7 +103,28 @@ public class PruebaNapakalaki {
         monstruos. add(new Monster("Familia Feliz", 1, badConsequence, prize));
         
         // Creacion Monstruo "Chibithulhu"
-        badConsequence = new BadConsequence("Embobados con el lindo primigenio te descartas de tu casco visible", 0, null, null)
+        badConsequence = new BadConsequence("Embobados con el lindo primigenio te descartas de tu casco visible", 0,
+                new ArrayList(Arrays.asList(TreasureKind.HELMET)), new ArrayList(Arrays.asList()));
+        prize = new Prize(1,1);
+        monstruos.add(new Monster("Chibithulhu", 2, badConsequence, prize));
+        
+        // Creacion Monstruo "Bicigooth"
+        badConsequence = new BadConsequence("Sientes bichos bajo la ropa. Descarta la armadura visible", 0,
+                new ArrayList(Arrays.asList(TreasureKind.ARMOR)), null);
+        prize = new Prize(1,1);
+        monstruos.add(new Monster("Bicigooth", 2, badConsequence, prize));
+        
+        //Creacion Monstruo "Roboggoth"
+        badConsequence = new BadConsequence("La quinta directiva primaria te obliga a perder 2 niveles y un tesoro 2 manos visible",
+                2, new ArrayList(Arrays.asList(TreasureKind.BOTHHANDS)), null);
+        prize = new Prize(2,1);
+        monstruos.add(new Monster("Roboggoth", 8, badConsequence, prize));
+        
+        //Creacion Monstruo "Bicefalo"
+        badConsequence = new BadConsequence("Te faltan manos para tanta cabeza. Pierde 3 niveles y tus tesoros visibles de las manos",
+                3, new ArrayList(Arrays.asList(TreasureKind.BOTHHANDS,TreasureKind.ONEHAND)), null);
+        prize = new Prize(1,1);
+        monstruos.add(new Monster("Bicefalo", 20, badConsequence, prize));
         
         /* CONSULTORES */
         
