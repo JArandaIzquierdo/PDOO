@@ -4,7 +4,7 @@ package napakalaki;
 
 /**
  *
- * @author carlos
+ * @author Javier y Carlos 
  */
 public class Prize {
     // Atributos privados

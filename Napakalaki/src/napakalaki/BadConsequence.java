@@ -23,7 +23,9 @@ public class BadConsequence {
     private ArrayList<TreasureKind> specificVisibleTreasures = new ArrayList();
     
     
-    //Constructores
+    //Constructores de mal rollo
+    
+    //Constructor para mal rollo sin especificar 
     public BadConsequence(String text, int levels, int nVisible, int nHidden){
         setText(text);
         setLevels(levels);
