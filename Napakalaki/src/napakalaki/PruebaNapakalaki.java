@@ -75,6 +75,18 @@ public class PruebaNapakalaki {
         prize= new Prize(1,1);
         monstruos.add(new Monster("El espia", 5, badConsequence, prize));
         
+        // Creacion de "El rey de rosa"         
+        badConsequence = new BadConsequence ("Pierder 5 niveles y tres tesoros visibles",5,3,0);
+        prize= new Prize (4,2);
+        monstruos.add(new Monster("El rey de rosa",13,badConsequence,prize));
+        
+        //Creacion "Angeles de la noche ibicenca"
+        badConsequence = new BadConsequence("Te atrapan para llevarte de fiesta y te dejan caer en mitad del vuelo. Descarta una "
+                + "mano visible y una mano oculta", 0, new ArrayList(Arrays.asList(TreasureKind.ONEHAND)), 
+                new ArrayList(Arrays.asList(TreasureKind.ONEHAND)));
+        prize = new Prize(4, 1);
+        monstruos.add(new Monster("Angel de la noche ibicenca",14,badConsequence,prize));
+        
         /* CONSULTORES */
         
         // Consulta Monstruos con nivel igual o superior a 10
