@@ -16,11 +16,11 @@ class BadConsequence
   end
   
   #Consultores
-  BadConsequence attr_accessor:text
-  BadConsequence attr_accessor:levels
-  BadConsequence attr_accessor:nVisibleTreasures
-  BadConsequence attr_accessor:nHiddenTreasures
-  BadConsequence attr_accessor:death
+  BadConsequence attr_reader:text
+  BadConsequence attr_reader:levels
+  BadConsequence attr_reader:nVisibleTreasures
+  BadConsequence attr_reader:nHiddenTreasures
+  BadConsequence attr_reader:death
   
   
 end

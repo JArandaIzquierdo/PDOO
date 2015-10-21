@@ -12,9 +12,9 @@ class Monster
   end
   
   #Consultores
-  Monster attr_accessor:name
-  Monster attr_accessor:combatLevel
-  Monster attr_accesor:bc
-  Monster attr_accesor:price
+  Monster attr_reader:name
+  Monster attr_reader:combatLevel
+  Monster attr_reader:bc
+  Monster attr_reader:price
   
 end
