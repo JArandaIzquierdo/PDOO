@@ -6,10 +6,10 @@ class Prize
   
   def initialize(treasures, level)
      @treasures=treasures
-     @level=level    
+     self.level=level    #¿Cual de los dos?
   end
   
   #Consultores
-  Prize attr_accessor:treasures
-  Prize attr_accessor:level
+  Prize attr_reader:treasures #Prize attr_reader:treasures, :level
+  Prize attr_reader:level
 end
