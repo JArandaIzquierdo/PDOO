@@ -8,7 +8,7 @@ require_relative "monster"
 
 buen_rollo = Prize.new(2,7)
 mal_rollo = BadConsequence.new("Pringao",10,2,3)
-cortijo = Monster.new("Cortijo",100,mal_rollo,buen_rollo)
+monstruo = Monster.new("Monstruo",100,mal_rollo,buen_rollo)
 
 
 puts "Prueba Prize:"
@@ -16,4 +16,4 @@ puts buen_rollo
 puts "Prueba BadConsequence:"
 puts mal_rollo
 puts "Prueba Monstruo"
-puts cortijo
+puts monstruo
