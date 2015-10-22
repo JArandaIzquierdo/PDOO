@@ -10,14 +10,33 @@ class BadConsequence
     @levels=someLevels  # Level que se pierden
     @nVisibleTreasures=someVisibleTreasures  # Nº tesoros visibles que se pierden
     @nHiddenTreasures=someHiddenTreasures   # Nº tesoros ocultos que se pierden
-    @someVisibleTreasures=someSpecificVisibleTreasures
-    @someHiddenTreasures=someSpecificHiddenTreasures
+    
+    @someVisibleTreasures=someSpecificVisibleTreasures #Tesoro especifico visible
+    @someHiddenTreasures=someSpecificHiddenTreasures   #Tesoro especifico invisible
+    
     @death=death   # Indica si muere el jugador o no
     
+   
+  end
+  
+  #Llama al constructor
+  def self.newLevelNumberOfTreasures (aText, someLevels,
+    someVisibleTreasures, someHiddenTreasures)
+  
+    new(aText, someLevels, someVisibleTreasures, someHiddenTreasures)
+  end
+  
+  #Llama al constructor
+  def self.newLevelSpecificTreasures (aText, someLevels,
+    someSpecificVisibleTreasures, someSpecificHiddenTreasures)
+  
+    new(aText, someLevels, someSpecificVisibleTreasures, someSpecificHiddenTreasures)
+  end
+  
+  #Llama al constructor
+  def self.newDeath (aText)
     
-    #private ArrayList<TreasureKind> specificHiddenTreasures = new ArrayList();
-    #private ArrayList<TreasureKind> specificVisibleTreasures = new ArrayList();
-    #Array.new
+    new(aText)
   end
   
   #Consultores
@@ -25,6 +44,8 @@ class BadConsequence
   attr_reader:levels
   attr_reader:nVisibleTreasures
   attr_reader:nHiddenTreasures
+  attr_reader:someVisibleTreasures
+  attr_reader:someHiddenTreasures
   attr_reader:death
   
  

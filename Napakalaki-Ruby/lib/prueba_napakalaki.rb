@@ -5,6 +5,7 @@
 require_relative "bad_consequence"
 require_relative "prize"
 require_relative "monster"
+require_relative "treasure_kind"
 
 buen_rollo = Prize.new(2,7)
 mal_rollo = BadConsequence.new("Pringao",10,2,3,Array.new,Array.new,false)
@@ -15,6 +16,7 @@ puts "Prueba Prize:"
 print buen_rollo.treasures," "
 puts buen_rollo.level
 puts "Prueba BadConsequence:"
-print mal_rollo.text, " ", mal_rollo.levels," "
+print mal_rollo.text, " ", mal_rollo.levels," ", mal_rollo.nVisibleTreasures," ", mal_rollo.nHiddenTreasures," "
+puts mal_rollo.death
 puts "Prueba Monstruo"
-puts monstruo.combatLevel
+print monstruo.name," ", monstruo.combatLevel
