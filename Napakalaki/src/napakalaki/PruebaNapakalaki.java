@@ -148,6 +148,14 @@ public class PruebaNapakalaki {
                 System.out.println(m.toString());
             }
         }
+        
+        /* Consulta Monstruos que su mal rollo suponga la perdida de un determinado
+        tipo de tesoros, ya sea visibles y/o ocultos*/
+        System.out.println("Los monstruos que su mal rollos suponga la perdida de un determinado tipo de tesoro son: ");
+        for(Monster m: monstruos){
+            //if(m.getBadConsequence().g)
+        
+        }
     }
     
 }
