@@ -153,7 +153,9 @@ public class PruebaNapakalaki {
         tipo de tesoros, ya sea visibles y/o ocultos*/
         System.out.println("Los monstruos que su mal rollos suponga la perdida de un determinado tipo de tesoro son: ");
         for(Monster m: monstruos){
-            //if(m.getBadConsequence().g)
+            if((m.getBadConsequence().TieneTesoros())){
+                System.out.println(m.toString());
+            }
         
         }
     }

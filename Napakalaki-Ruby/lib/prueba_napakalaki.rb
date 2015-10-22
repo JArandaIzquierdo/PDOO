@@ -15,6 +15,6 @@ puts "Prueba Prize:"
 print buen_rollo.treasures," "
 puts buen_rollo.level
 puts "Prueba BadConsequence:"
-puts mal_rollo.text
+print mal_rollo.text, " ", mal_rollo.levels," "
 puts "Prueba Monstruo"
 puts monstruo.combatLevel
