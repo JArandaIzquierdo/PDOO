@@ -4,6 +4,8 @@
 
 class BadConsequence
   
+  private_class_method :new
+  
   def initialize(aText, someLevels, someVisibleTreasures, someHiddenTreasures,
     someSpecificVisibleTreasures, someSpecificHiddenTreasures, death)
     @text=aText    # Mensaje de mal rollo
