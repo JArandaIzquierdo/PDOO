@@ -4,7 +4,7 @@
 
 class BadConsequence
   
-  #private_class_method :new
+  private_class_method:new
   
   def initialize(aText, someLevels, someVisibleTreasures, someHiddenTreasures,
     someSpecificVisibleTreasures, someSpecificHiddenTreasures, death)
@@ -25,21 +25,23 @@ class BadConsequence
   def self.newLevelNumberOfTreasures (aText, someLevels,
     someVisibleTreasures, someHiddenTreasures)
   
-    new(aText, someLevels, someVisibleTreasures, someHiddenTreasures)
+    new(aText, someLevels, someVisibleTreasures, someHiddenTreasures, 0, 0, false)
   end
   
   #Llama al constructor
   def self.newLevelSpecificTreasures (aText, someLevels,
     someSpecificVisibleTreasures, someSpecificHiddenTreasures)
   
-    new(aText, someLevels, someSpecificVisibleTreasures, someSpecificHiddenTreasures)
+    new(aText, someLevels, 0, 0, someSpecificVisibleTreasures, someSpecificHiddenTreasures, false)
   end
   
   #Llama al constructor
   def self.newDeath (aText)
     
-    new(aText)
+    new(aText, 0, 0, 0, 0, 0, true)
   end
+  
+  
   
   #Consultores
   attr_reader:text

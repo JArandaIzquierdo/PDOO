@@ -8,10 +8,9 @@ require_relative "monster"
 require_relative "treasure_kind"
 
 buen_rollo = Prize.new(2,7)
-mal_rollo = BadConsequence.new("Pringao",10,2,3,Array.new,Array.new,false)
+mal_rollo = BadConsequence.newDeath(true)
 monstruo = Monster.new("Monstruo",100,mal_rollo,buen_rollo)
 
-mal_rollo.newDeath ("Caraculo")
 
 
 puts buen_rollo.to_s
