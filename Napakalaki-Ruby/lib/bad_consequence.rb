@@ -4,7 +4,7 @@
 
 class BadConsequence
   
-  private_class_method :new
+  #private_class_method :new
   
   def initialize(aText, someLevels, someVisibleTreasures, someHiddenTreasures,
     someSpecificVisibleTreasures, someSpecificHiddenTreasures, death)
@@ -49,6 +49,10 @@ class BadConsequence
   attr_reader:someVisibleTreasures
   attr_reader:someHiddenTreasures
   attr_reader:death
-  
+              
+  def to_s
+  "Texto: #{@text} \n Niveles perdidos: #{@levels} \n Tesoros visibles: #{@nVisibleTreasures}
+  Tesoros ocultos: #{@nHiddenTreasures} \n Muerte: #{@death}"
+  end
  
 end

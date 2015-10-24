@@ -20,4 +20,10 @@ class Monster
   attr_reader:bc
   attr_reader:price
   
+  
+  # Metodo to_s
+  def to_s
+  "Nombre monstruo: #{@name} \n Nivel de combate: #{@combatLevel}"
+  end
+  
 end

@@ -11,12 +11,9 @@ buen_rollo = Prize.new(2,7)
 mal_rollo = BadConsequence.new("Pringao",10,2,3,Array.new,Array.new,false)
 monstruo = Monster.new("Monstruo",100,mal_rollo,buen_rollo)
 
+mal_rollo.newDeath ("Caraculo")
 
-puts "Prueba Prize:"
-print buen_rollo.treasures," "
-puts buen_rollo.level
-puts "Prueba BadConsequence:"
-print mal_rollo.text, " ", mal_rollo.levels," ", mal_rollo.nVisibleTreasures," ", mal_rollo.nHiddenTreasures," "
-puts mal_rollo.death
-puts "Prueba Monstruo"
-print monstruo.name," ", monstruo.combatLevel
+
+puts buen_rollo.to_s
+puts mal_rollo.to_s
+puts monstruo.to_s

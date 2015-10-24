@@ -12,4 +12,10 @@ class Prize
   #Consultores
   attr_reader:treasures
   attr_reader:level
+  
+  def to_s
+  "Tesoros ganados: #{@treasures} \n Niveles ganados: #{@level}"
+  end
+    
+
 end
