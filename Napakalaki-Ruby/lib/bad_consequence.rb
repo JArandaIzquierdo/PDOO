@@ -55,5 +55,12 @@ class BadConsequence
   def to_s
   "Texto: #{@text} \nNiveles perdidos: #{@levels} \nTesoros visibles: #{@nVisibleTreasures} \nTesoros ocultos: #{@nHiddenTreasures} \nMuerte: #{@death}"
   end
+  
+  # Metodo Consultor de mal rollo que solo implique perdida de niveles
+  def OnlyLevelsBadConsequence
+    if (levels>0) && (nVisibleTreasures==0) && (nHiddenTreasures==0)
+      true
+    end
+  end
  
 end

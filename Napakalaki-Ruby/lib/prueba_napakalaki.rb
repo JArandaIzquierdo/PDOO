@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
 # To change this license header, choose License Headers in Project Properties.
 # To change this template file, choose Tools | Templates
 # and open the template in the editor.
@@ -76,3 +78,19 @@ price = Prize.new(1,1)
 badConsequence = BadConsequence.newLevelSpecificTreasures("Te intentas escaquear.
 Pierdes una mano visible.", 0, [TreasureKind::ONEHAND],0)
 monsters << Monster.new("Dameargo",20,price,badConsequence)
+
+
+# CONSULTAS
+# Monstruos cuyo nivel de combate supera a 10
+for m in monsters
+  if m.LevelExceeding10
+    puts m.to_s
+  end
+end
+
+# Monstruos cuyo mal rollo solo implica perdida de niveles
+for m in monsters
+  if m.badConsequence.levels>1
+    puts m.to_s
+  end
+end
