@@ -7,12 +7,19 @@ require_relative "prize"
 require_relative "monster"
 require_relative "treasure_kind"
 
-buen_rollo = Prize.new(2,7)
-mal_rollo = BadConsequence.newDeath(true)
-monstruo = Monster.new("Monstruo",100,mal_rollo,buen_rollo)
+monsters = Array.new  # Array de monstruos
 
+# CREACIÓN DE LOS MONSTRUOS
 
+# El gorrón en el umbral
+price = Prize.new(3,1)
+badConsequence = BadConsequence.newLevelNumberOfTreasures("Pierdes todos tus tesoros
+visibles",100 , 0, 0)
+monsters << Monster.new("El gorrón en el umbral",10,price,badConsequence)
 
-puts buen_rollo.to_s
-puts mal_rollo.to_s
-puts monstruo.to_s
+# 3 Byakhees de bonanza
+price = Prize.new(2,1)
+badConsequence = BadConsequence.newLevelSpecificTreasures("Pierdes tu armadura
+visible y otra oculta",0 , [TreasureKind::ARMOR], [TreasureKind::ARMOR])
+monsters << Monster.new("3 Byakhees de bonanza",8,price,badConsequence)
+

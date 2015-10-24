@@ -53,8 +53,7 @@ class BadConsequence
   attr_reader:death
               
   def to_s
-  "Texto: #{@text} \n Niveles perdidos: #{@levels} \n Tesoros visibles: #{@nVisibleTreasures}
-  Tesoros ocultos: #{@nHiddenTreasures} \n Muerte: #{@death}"
+  "Texto: #{@text} \nNiveles perdidos: #{@levels} \nTesoros visibles: #{@nVisibleTreasures} \nTesoros ocultos: #{@nHiddenTreasures} \nMuerte: #{@death}"
   end
  
 end

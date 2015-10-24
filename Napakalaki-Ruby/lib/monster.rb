@@ -23,7 +23,7 @@ class Monster
   
   # Metodo to_s
   def to_s
-  "Nombre monstruo: #{@name} \n Nivel de combate: #{@combatLevel}"
+  "Nombre monstruo: #{@name} \nNivel de combate: #{@combatLevel}"
   end
   
 end
