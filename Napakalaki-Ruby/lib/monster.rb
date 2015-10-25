@@ -7,17 +7,17 @@ require_relative "bad_consequence"
 
 class Monster
   
-  def initialize(name,combatLevel,bc,prize)
+  def initialize(name,combatLevel,badConsequence,prize)
     @name=name
     @combatLevel=combatLevel
-    @bc=bc
+    @badConsequenze=badConsequenze
     @price=prize
   end
   
   #Consultores
   attr_reader:name
   attr_reader:combatLevel
-  attr_reader:bc
+  attr_reader:badConsequence
   attr_reader:prize
   
   
@@ -35,7 +35,8 @@ class Monster
   
   # Metodo Consultor de mal rollo que solo implique perdida de niveles
   def OnlyLevelsBadConsequence
-    if (bc.levels>0) && (bc.nVisibleTreasures==0) && (bc.nHiddenTreasures==0)
+    if (badConsequence.levels>0) && (badConsequence.nVisibleTreasures==0) &&
+        (badConsequence.nHiddenTreasures==0)
       true
     end
   end
@@ -50,7 +51,7 @@ class Monster
   # Metodo Consultor mal rollo que suponga la pérdida de un 
   # determinado tipo de tesoros ya sea visibles y/o ocultos
   def LoseSpecificTreasures
-    if (bc.someVisibleTreasures!=0) || (bc.someHiddenTreasures!=0)
+    if (badConsequence.someVisibleTreasures!=0) || (badConsequence.someHiddenTreasures!=0)
       true
     end
   end
