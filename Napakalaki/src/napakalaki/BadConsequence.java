@@ -100,22 +100,19 @@ public class BadConsequence {
     }
     
     // Metodo que comprueba si un monstruo tiene tesoros
-    public boolean TieneTesoros(){
-        boolean tiene=false;
-        
-        if((!specificVisibleTreasures.isEmpty()) || (!specificVisibleTreasures.isEmpty())){
-            tiene = true;
-        }
-        
-        return tiene;
+    public boolean TieneTesoros(){        
+        if((!specificVisibleTreasures.isEmpty()) || (!specificVisibleTreasures.isEmpty()))
+            return true;
+        else
+            return false;
     }
     
     // Método toString
     @Override   //Estamos sobreescibribiendo un método padre de Java
     public String toString(){
-        return " Text = " + text + " Levels = " + Integer.toString(levels)
-                + " NVisibleTreasures = " + Integer.toString(nVisibleTreasures)
-                + " NHiddenTreasures = " + Integer.toString(nHiddenTreasures)
-                + " Death = " + death;
+        return " Text = " + text + ". Levels = " + Integer.toString(levels)
+                + ". NVisibleTreasures = " + Integer.toString(nVisibleTreasures)
+                + ". NHiddenTreasures = " + Integer.toString(nHiddenTreasures)
+                + ". Death = " + death;
     }
 }

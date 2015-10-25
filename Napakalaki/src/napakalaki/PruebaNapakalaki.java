@@ -126,7 +126,7 @@ public class PruebaNapakalaki {
         // Consulta Monstruos con nivel igual o superior a 10
         System.out.println("Monstruos con nivel igual o superior a 10");
         for(Monster m: monstruos){
-            if(m.getCombatLevel()>9){
+            if(m.LevelExceeding10()){
                 System.out.println(m.toString());
             }
         }
@@ -134,17 +134,14 @@ public class PruebaNapakalaki {
         // Consulta Monstruos que tengan un mal rollo que implique sólo pérdida de niveles.
         System.out.println("Monstruos que tengan un mal rollo que implique sólo pérdida de niveles.");
         for(Monster m: monstruos){
-            if((m.getBadConsequence().getLevels()!=0) && 
-                    (m.getBadConsequence().getNVisibleTreasures()==0) && 
-                    (m.getBadConsequence().getNHiddenTreasures()==0)){
+            if(m.OnlyLevelsBadConsequence())
                 System.out.println(m.toString());
-            }
         }
         
         // Consulta Monstruos que su buen rollo indique una ganancia de niveles superior a 1.
         System.out.println("Monstruos que su buen rollo indique una ganancia de niveles superior a 1");
         for(Monster m: monstruos){
-            if(m.getPrize().getLevel()>1){
+            if(m.PrizeLevelsExceeding1()){
                 System.out.println(m.toString());
             }
         }
@@ -153,7 +150,7 @@ public class PruebaNapakalaki {
         tipo de tesoros, ya sea visibles y/o ocultos*/
         System.out.println("Los monstruos que su mal rollos suponga la perdida de un determinado tipo de tesoro son: ");
         for(Monster m: monstruos){
-            if((m.getBadConsequence().TieneTesoros())){
+            if(m.LoseSpecificTreasures()){
                 System.out.println(m.toString());
             }
         
