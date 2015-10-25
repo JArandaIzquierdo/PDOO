@@ -4,9 +4,11 @@ require relative "prize"
 require relative "bad_consequence"
 
 class Monster
-  def initialize(name,combarLevel)
+  def initialize(name,combarLevel,prize,badConsequence)
     @name=name
     @combarLevel=combarLevel
+    @prize=prize
+    @badConsequence=badConsequence
     
   end
   
