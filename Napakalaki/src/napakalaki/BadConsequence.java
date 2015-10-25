@@ -99,6 +99,17 @@ public class BadConsequence {
         return death;
     }
     
+    // Metodo que comprueba si un monstruo tiene tesoros
+    public boolean TieneTesoros(){
+        boolean tiene=false;
+        
+        if((!specificVisibleTreasures.isEmpty()) || (!specificVisibleTreasures.isEmpty())){
+            tiene = true;
+        }
+        
+        return tiene;
+    }
+    
     // Método toString
     @Override   //Estamos sobreescibribiendo un método padre de Java
     public String toString(){

@@ -20,4 +20,24 @@ class Monster
   attr_reader:bc
   attr_reader:price
   
+  
+  # Metodo to_s
+  def to_s
+  "Nombre monstruo: #{@name} \nNivel de combate: #{@combatLevel}"
+  end
+  
+  # Metodo Consultor nivel superior a 10
+  def LevelExceeding10
+    if combatLevel>10
+      true
+    end
+  end
+  
+  # Metodo Consultor de mal rollo que solo implique perdida de niveles
+  def OnlyLevelsBadConsequence
+    if bc.OnlyLevelsBadConsequence
+      true
+    end
+  end
+  
 end
