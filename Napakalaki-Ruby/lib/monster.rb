@@ -26,7 +26,7 @@ class Monster
   "Nombre monstruo: #{@name} \nNivel de combate: #{@combatLevel}"
   end
   
-  # Metodo Consultor nivel superior a 10
+  # Metodo Consultor nivel de combate superior a 10
   def LevelExceeding10
     if combatLevel>10
       true
@@ -35,7 +35,22 @@ class Monster
   
   # Metodo Consultor de mal rollo que solo implique perdida de niveles
   def OnlyLevelsBadConsequence
-    if bc.OnlyLevelsBadConsequence
+    if (bc.levels>0) && (bc.nVisibleTreasures==0) && (bc.nHiddenTreasures==0)
+      true
+    end
+  end
+  
+  # Metodo Consultor de buen rollo con nivel superior a 1
+  def PrizeLevelsExceeding1
+    if price.level>1
+      true
+    end
+  end
+  
+  # Metodo Consultor mal rollo que suponga la pérdida de un 
+  # determinado tipo de tesoros ya sea visibles y/o ocultos
+  def LoseSpecificTreasures
+    if (bc.someVisibleTreasures!=0) || (bc.someHiddenTreasures!=0)
       true
     end
   end

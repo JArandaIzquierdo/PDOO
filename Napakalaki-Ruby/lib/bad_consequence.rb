@@ -53,14 +53,8 @@ class BadConsequence
   attr_reader:death
               
   def to_s
-  "Texto: #{@text} \nNiveles perdidos: #{@levels} \nTesoros visibles: #{@nVisibleTreasures} \nTesoros ocultos: #{@nHiddenTreasures} \nMuerte: #{@death}"
-  end
-  
-  # Metodo Consultor de mal rollo que solo implique perdida de niveles
-  def OnlyLevelsBadConsequence
-    if (levels>0) && (nVisibleTreasures==0) && (nHiddenTreasures==0)
-      true
-    end
+  "Texto: #{@text} \nNiveles perdidos: #{@levels} \nTesoros visibles: #{@nVisibleTreasures} \nTesoros ocultos: #{@nHiddenTreasures}
+Tesoro Especifico visible: #{@someVisibleTreasures} \nTesoro Especifico oculto: #{@someHiddenTreasures} \nMuerte: #{@death}"
   end
  
 end
