@@ -7,18 +7,18 @@ require_relative "bad_consequence"
 
 class Monster
   
-  def initialize(name,combatLevel,bc,price)
+  def initialize(name,combatLevel,bc,prize)
     @name=name
     @combatLevel=combatLevel
     @bc=bc
-    @price=price
+    @price=prize
   end
   
   #Consultores
   attr_reader:name
   attr_reader:combatLevel
   attr_reader:bc
-  attr_reader:price
+  attr_reader:prize
   
   
   # Metodo to_s
@@ -42,7 +42,7 @@ class Monster
   
   # Metodo Consultor de buen rollo con nivel superior a 1
   def PrizeLevelsExceeding1
-    if price.level>1
+    if prize.level>1
       true
     end
   end
