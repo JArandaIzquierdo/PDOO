@@ -10,5 +10,6 @@ package napakalaki;
  * @author carlos
  */
 public class Treasure {
-    
+    private String name;
+    private int bonus;
 }

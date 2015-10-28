@@ -9,6 +9,7 @@ package napakalaki;
  *
  * @author carlos
  */
-public class CombatResult {
+public enum CombatResult {
+    WINGAME,WIN,LOSE
     
 }
