@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-# encoding: utf-8
 # # Clase para hacer las pruebas del juego
 # Autores: Javier Aranda Izquierdo
 #          Carlos 
@@ -10,14 +8,16 @@ require_relative "monster"
 require_relative "treasure_kind"
 
 monsters = Array.new  # Array de monstruos
+handTreasures = Array.new  #Array para los terosoros de las manos de Bicefalo
+handTreasures << [TreasureKind::BOTHHANDS,TreasureKind::ONEHAND,TreasureKind::ONEHAND]
 
-# CREACIÓN DE LOS MONSTRUOS
+# CREACION DE LOS MONSTRUOS
 
-# El gorrón en el umbral
+# El gorron en el umbral
 prize = Prize.new(3,1)
 badConsequence = BadConsequence.newLevelNumberOfTreasures("Pierdes todos tus tesoros
 visibles",100 , 0, 0)
-monsters << Monster.new("El gorrón en el umbral",10,badConsequence,prize)
+monsters << Monster.new("El gorron en el umbral",10,badConsequence,prize)
 
 # 3 Byakhees de bonanza
 prize = Prize.new(2,1)
@@ -132,8 +132,8 @@ monsters << Monster.new("Roboggoth", 8, badConsequence, prize)
 prize= Prize.new(1,1)
 badConsequence= BadConsequence.newLevelSpecificTreasures("Te faltan manos para 
 tanta cabeza. Pierdes 3 niveles y tus tesoros visibles de las manos.",
-  3, [TreasureKind::BOTHHANDS] && [TreasureKind::ONEHAND], 0)
-monsters << Monster.new("Bicéfalo", 20 , badConsequence, prize)
+  3, handTreasures, 0)
+monsters << Monster.new("Bicefalo", 20 , badConsequence, prize)
 
 
 # CONSULTAS
@@ -171,9 +171,9 @@ for m in monsters
   end
 end
 
-# Monstruos que tengan un mal rollo que suponga la pérdida de un 
+# Monstruos que tengan un mal rollo que suponga la perdida de un 
 # determinado tipo de tesoros ya sea visibles y/o ocultos.
-puts "Monstruos que tengan un mal rollo que suponga la pérdida de un
+puts "Monstruos que tengan un mal rollo que suponga la perdida de un
 determinado tipo de tesoros ya sea visibles y/o ocultos."
 puts  #Salto de línea
 
