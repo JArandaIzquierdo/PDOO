@@ -132,7 +132,7 @@ monsters << Monster.new("Roboggoth", 8, badConsequence, prize)
 prize= Prize.new(1,1)
 badConsequence= BadConsequence.newLevelSpecificTreasures("Te faltan manos para 
 tanta cabeza. Pierdes 3 niveles y tus tesoros visibles de las manos.",
-  3, [TreasureKind::BOTHHANDS] && [TreasureKind::ONEHAND], 0)
+  3, [TreasureKind::BOTHHANDS] && [TreasureKind::ONEHAND] && [TreasureKind::ONEHAND], 0)
 monsters << Monster.new("Bicéfalo", 20 , badConsequence, prize)
 
 
