@@ -8,7 +8,7 @@ require_relative "monster"
 require_relative "treasure_kind"
 
 monsters = Array.new  # Array de monstruos
-handTreasures = Array.new(3)  #Array para los terosoros de las manos de Bicefalo
+handTreasures = Array.new  #Array para los terosoros de las manos de Bicefalo
 handTreasures << [TreasureKind::BOTHHANDS,TreasureKind::ONEHAND,TreasureKind::ONEHAND]
 
 # CREACION DE LOS MONSTRUOS
@@ -132,13 +132,8 @@ monsters << Monster.new("Roboggoth", 8, badConsequence, prize)
 prize= Prize.new(1,1)
 badConsequence= BadConsequence.newLevelSpecificTreasures("Te faltan manos para 
 tanta cabeza. Pierdes 3 niveles y tus tesoros visibles de las manos.",
-<<<<<<< HEAD
-  3, [TreasureKind::BOTHHANDS] && [TreasureKind::ONEHAND] && [TreasureKind::ONEHAND], 0)
-monsters << Monster.new("Bicéfalo", 20 , badConsequence, prize)
-=======
   3, handTreasures, 0)
 monsters << Monster.new("Bicefalo", 20 , badConsequence, prize)
->>>>>>> acb507d19daca9ffad557b0312ba33d2e1f9453c
 
 
 # CONSULTAS
