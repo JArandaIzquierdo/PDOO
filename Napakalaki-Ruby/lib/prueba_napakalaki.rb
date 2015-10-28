@@ -8,7 +8,7 @@ require_relative "monster"
 require_relative "treasure_kind"
 
 monsters = Array.new  # Array de monstruos
-handTreasures = Array.new(3)  #Array para los terosoros de las manos de Bicefalo
+handTreasures = Array.new  #Array para los terosoros de las manos de Bicefalo
 handTreasures << [TreasureKind::BOTHHANDS,TreasureKind::ONEHAND,TreasureKind::ONEHAND]
 
 # CREACION DE LOS MONSTRUOS
