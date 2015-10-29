@@ -12,4 +12,14 @@ package napakalaki;
 public class Treasure {
     private String name;
     private int bonus;
+    
+    
+    private Treasure(String n, int g, int bonus1, TreasureKind t){
+        name=n;
+        bonus=bonus1;
+    }
+    
+    private String getName();
+    private int getBonus();
+    private TreasureKind getType();
 }
