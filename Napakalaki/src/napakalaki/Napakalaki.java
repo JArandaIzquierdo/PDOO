@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class Napakalaki {
     private static Napakalaki instance = null;
     private static final Napakalaki instance = new Napakalaki();
+    private CombatResult result;
     
     private Napakalaki(){
         

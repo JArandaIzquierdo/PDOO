@@ -12,11 +12,13 @@ package napakalaki;
 public class Treasure {
     private String name;
     private int bonus;
+    private TreasureKind treasure;
     
     
     private Treasure(String n, int g, int bonus1, TreasureKind t){
         name=n;
         bonus=bonus1;
+        treasure=t;
     }
     
     private String getName();

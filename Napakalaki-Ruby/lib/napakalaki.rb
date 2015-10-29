@@ -8,8 +8,8 @@ class Napakalaki
   
   include Singleton
   
-  def initialize
-    
+  def initialize(resultado)
+    @result=resultado
   end
   
   
