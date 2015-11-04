@@ -9,9 +9,8 @@ class Treasure
     @treasure=t
   end
     
-    def getName() end
-    def getBonus() end
-    def getType() end
-    
+    attr_reader:name
+    attr_reader:bonus
+    attr_reader:treasure    
     
 end

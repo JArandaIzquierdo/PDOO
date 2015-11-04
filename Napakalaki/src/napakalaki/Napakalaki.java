@@ -12,7 +12,6 @@ import java.util.ArrayList;
  * @author carlos
  */
 public class Napakalaki {
-    private static Napakalaki instance = null;
     private static final Napakalaki instance = new Napakalaki();
     private CombatResult result;
     

@@ -185,3 +185,54 @@ for m in monsters
     puts #Salto de línea
   end
 end
+
+ #Array de Tesoros
+  tesoros = Array.new
+        
+  #Creación de Tesoro ¡Sí mi amo!
+  tesoros << Treasure.new("¡Si mi amo!", 0, 4,TreasureKind.HELMET);
+        
+  #Creación de Tesoro Capucha de Cthulhu
+  tesoros << Treasure.new("Capucha de Cthulhu", 0, 3,TreasureKind.HELMET);
+        
+  #Creación de Tesoro Botas de lluvia acida
+  tesoros << Treasure.new("Botas de lluvia acida", 0, 1,TreasureKind.BOTHHANDS);
+        
+  #Creación de Tesoro Ametralladora Thompson
+  tesoros << Treasure.new("Ametralladora Thompson", 0, 4,TreasureKind.BOTHHANDS);
+        
+  #Creación de Tesoro Clavo de rail ferroviario
+  tesoros << Treasure.new("Clavo de rail ferroviario", 0, 3,TreasureKind.ONEHAND);
+        
+  #Creación de Tesoro Fez alopodo
+  tesoros << Treasure.new("Fez alopodo", 0, 3,TreasureKind.HELMET);        
+        
+  #Creación de Tesoro El aparato del Pr. Tesla
+  tesoros << Treasure.new("El aparato del Pr. Tesla", 0, 4,TreasureKind.ARMOR);
+        
+  #Creación de Tesoro Insecticida
+  tesoros << Treasure.new("Insecticida", 0, 2,TreasureKind.ONEHAND);        
+        
+  #Creación de Garabato mistico
+  tesoros << Treasure.new("Insecticida", 0, 2,TreasureKind.ONEHAND);
+        
+  #Creación de Lanzallamas
+  tesoros << Treasure.new("Lanzallamas", 0, 4,TreasureKind.BOTHHANDS);
+        
+  #Creación de Necronomicon
+  tesoros << Treasure.new("Necronomicon", 0, 5,TreasureKind.BOTHHANDS);
+        
+  #Creación de Necro-gnomicon
+  tesoros << Treasure.new("Necro-gnomicon", 0, 2,TreasureKind.ONEHAND);
+        
+  #Creación de Mazo de los antiguos
+  tesoros << Treasure.new("Mazo de los antiguos", 0, 3,TreasureKind.ONEHAND);
+        
+  #Creación de Porra preternatural
+  tesoros << Treasure.new("Porra preternatural", 0, 2,TreasureKind.ONEHAND);
+        
+  #Creación de Varita de atizamiento
+  tesoros << Treasure.new("Varita de atizamiento", 0, 3,TreasureKind.ONEHAND);
+        
+  #Creación de Zapato deja-amigos
+  tesoros << Treasure.new("Zapato deja-amigos", 0, 1,TreasureKind.SHOES);

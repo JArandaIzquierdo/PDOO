@@ -5,7 +5,6 @@ package napakalaki;
  * @author carlos
  */
 public class Dice {
-    private static Dice instance=null;
     private static final Dice instance= new Dice();
     
     private Dice(){
