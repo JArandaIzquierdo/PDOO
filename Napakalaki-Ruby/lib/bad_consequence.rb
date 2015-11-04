@@ -37,6 +37,10 @@ class BadConsequence
     new(aText, 0, 0, 0, 0, 0, true)
   end
   
+  def isEmpty
+    
+  end
+  
   
   
   #Consultores

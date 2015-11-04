@@ -86,6 +86,14 @@ public class Monster {
             return false;
     }
     
+    public int getLevelsGained(){
+        return price.getLevel();
+    }
+    
+    public int getTreasuresGained(){
+        return price.getTreasure();
+    }
+    
     // Método toString
     @Override   //Estamos sobreescibribiendo un método padre de Java
     public String toString(){

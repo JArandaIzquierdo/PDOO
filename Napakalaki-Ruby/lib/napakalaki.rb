@@ -11,38 +11,60 @@ class Napakalaki
   def initialize(resultado)
     @result=resultado
   end
-  
-  
-  @@instance = null
-    #private static final Napakalaki instance = new Napakalaki();
     
-    def Napakalaki() end
+    def Napakalaki
     
-    def initPlayers(names) end
+    end
     
-    def nextPlayer() end
+    def initPlayers(names)
     
-    def nextTurnAllowed() end
+    end
     
-    def setEnemies() end
+    def nextPlayer
+      
+    end
     
-    def getInstance() end #########################
+    def nextTurnAllowed
+      
+    end
     
-    def developCombat() end
+    def setEnemies
+      
+    end
     
-    def discardVisibleTreasures(treasures) end
+    def developCombat
+      
+    end
     
-    def discardHiddenTreasures(treasures) end
+    def discardVisibleTreasures(treasures)
+      
+    end
     
-    def makeTreasuresVisible(treasures) end
+    def discardHiddenTreasures(treasures)
+      
+    end
     
-    def initGame(players) end
+    def makeTreasuresVisible(treasures)
+      
+    end
     
-    def getCurrentPlayer() end
+    def initGame(players)
+      
+    end
     
-    def getCurrentMonster() end
+    def getCurrentPlayer
+      
+    end
     
-    def nextTurn() end
+    def getCurrentMonster
+      
+    end
     
-    def endOfGame(result) end
+    def nextTurn
+      
+    end
+    
+    def endOfGame(result)
+      
+    end
 end

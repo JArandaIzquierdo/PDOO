@@ -8,9 +8,17 @@ class Dice
   
   include Singleton
   
+  @@instance = Dice.new
+  
   def initialize
     
   end
+  
+  def public getInstance
+    @@instance
+  end
     
-    public nextNumber()
+  def public nextNumber
+     rand(7)
+  end
 end

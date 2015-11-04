@@ -56,4 +56,13 @@ class Monster
     end
   end
   
+  def getLevelsGained
+    price.level
+  end
+    
+  
+  def getTreasuresGained
+    price.treasures
+  end
+  
 end

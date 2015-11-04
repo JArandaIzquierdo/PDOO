@@ -107,6 +107,11 @@ public class BadConsequence {
             return false;
     }
     
+    // Metodo que 
+    private boolean isEmpty(){
+        
+    }
+    
     // Método toString
     @Override   //Estamos sobreescibribiendo un método padre de Java
     public String toString(){
