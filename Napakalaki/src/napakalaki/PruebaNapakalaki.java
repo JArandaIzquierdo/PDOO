@@ -16,6 +16,8 @@ public class PruebaNapakalaki {
         //Declaración de variables
         BadConsequence badConsequence;
         Prize prize;
+        
+        //Array de monstruos
         ArrayList<Monster> monstruos = new ArrayList();
         
         // Creación Monstruo "La que redacta en las tinieblas"
@@ -155,6 +157,58 @@ public class PruebaNapakalaki {
             }
         
         }
+        
+        
+        //Array de Tesoros
+        ArrayList<Treasure> tesoros = new ArrayList();
+        
+        //Creación de Tesoro ¡Sí mi amo!
+        tesoros.add(new Treasure("¡Si mi amo!", 0, 4,TreasureKind.HELMET));
+        
+        //Creación de Tesoro Capucha de Cthulhu
+        tesoros.add(new Treasure("Capucha de Cthulhu", 0, 3,TreasureKind.HELMET));
+        
+        //Creación de Tesoro Botas de lluvia acida
+        tesoros.add(new Treasure("Botas de lluvia acida", 0, 1,TreasureKind.BOTHHANDS));
+        
+        //Creación de Tesoro Ametralladora Thompson
+        tesoros.add(new Treasure("Ametralladora Thompson", 0, 4,TreasureKind.BOTHHANDS));
+        
+        //Creación de Tesoro Clavo de rail ferroviario
+        tesoros.add(new Treasure("Clavo de rail ferroviario", 0, 3,TreasureKind.ONEHAND));
+        
+        //Creación de Tesoro Fez alopodo
+        tesoros.add(new Treasure("Fez alopodo", 0, 3,TreasureKind.HELMET));        
+        
+        //Creación de Tesoro El aparato del Pr. Tesla
+        tesoros.add(new Treasure("El aparato del Pr. Tesla", 0, 4,TreasureKind.ARMOR));
+        
+        //Creación de Tesoro Insecticida
+        tesoros.add(new Treasure("Insecticida", 0, 2,TreasureKind.ONEHAND));        
+        
+        //Creación de Garabato mistico
+        tesoros.add(new Treasure("Insecticida", 0, 2,TreasureKind.ONEHAND));
+        
+        //Creación de Lanzallamas
+        tesoros.add(new Treasure("Lanzallamas", 0, 4,TreasureKind.BOTHHANDS));
+        
+        //Creación de Necronomicon
+        tesoros.add(new Treasure("Necronomicon", 0, 5,TreasureKind.BOTHHANDS));
+        
+        //Creación de Necro-gnomicon
+        tesoros.add(new Treasure("Necro-gnomicon", 0, 2,TreasureKind.ONEHAND));
+        
+        //Creación de Mazo de los antiguos
+        tesoros.add(new Treasure("Mazo de los antiguos", 0, 3,TreasureKind.ONEHAND));
+        
+        //Creación de Porra preternatural
+        tesoros.add(new Treasure("Porra preternatural", 0, 2,TreasureKind.ONEHAND));
+        
+        //Creación de Varita de atizamiento
+        tesoros.add(new Treasure("Varita de atizamiento", 0, 3,TreasureKind.ONEHAND));
+        
+        //Creación de Zapato deja-amigos
+        tesoros.add(new Treasure("Zapato deja-amigos", 0, 1,TreasureKind.SHOES));
     }
     
 }
