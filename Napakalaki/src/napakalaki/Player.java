@@ -2,7 +2,7 @@ package napakalaki;
 
 /**
  *
- * @author JaviAir
+ * @author Javier
  */
 public class Player {
     static final int MAXLEVEL=10;
@@ -119,6 +119,29 @@ public class Player {
     
     }
     
+    private Treasure giveMeATreasure(){
+        
+        return null;
+    }
+    
+    public boolean canISteal(){
+    
+        return false;
+    }
+    
+    private boolean canYouGiveMeATreasure(){
+    
+        return false;
+    }
+    
+    private void haveStolen(){
+    
+    }
+    
+    public void discardAllTreasures(){
+    
+    
+    }
         
     
 }
