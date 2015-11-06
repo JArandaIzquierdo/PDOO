@@ -95,6 +95,69 @@ class Player
   # --------------- Metodos Privados ----------
   private
   
+  # Motodo bringToLife
+  def bringToLife()
+    
+  end
   
+  # Motodo getCombatLevel
+  def getCombatLevel()
+    
+  end
+  
+  # Metodo incrementLevels
+  def incrementLevels(l)
+    
+  end
+  
+  # Metodo decrementLevels
+  def decrementLevels(l)
+    
+  end
+  
+  # Metodo setPendingBadConsequence
+  def setPendingBadConsequence(b)
+    
+  end
+  
+  # Metodo applyPrize
+  def applyPrize(m)
+    
+  end
+  
+  # Metodo applyBadConsequence
+  def applyBadConsequence(m)
+    
+  end
+  
+  # Metodo canMakeTreasureVisible
+  def canMakeTreasureVisible(t)
+    
+  end
+  
+  # Metodo howManyVisibleTreasures
+  def howManyVisibleTreasures(tKind)
+    
+  end
+  
+  # Metodo dieIfNoTreasures
+  def dieIfNoTreasures()
+    
+  end
+  
+  # Metodo gifMeATreasure
+  def gifMeATreasure()
+    
+  end
+  
+  # Metodo canYouGiveMeATreasure
+  def canYouGiveMeATreasure()
+    
+  end
+  
+  # Metodo haveStolen
+  def haveStolen()
+    
+  end
   
 end
