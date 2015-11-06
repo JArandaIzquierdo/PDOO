@@ -10,6 +10,11 @@ class CardDealer
   
   # ----------------- Metodos Publicos --------------------
   
+  # Metodo getInstance
+  def getInstance()
+    
+  end
+  
   # Metodo nextTreasure
   def nextTreasure()
     
@@ -32,6 +37,32 @@ class CardDealer
   
   # Metodo 
   def initCards()
+    
+  end
+  
+  # ------------------ Metodos privados -----------------
+  # Constructor
+  def CardDelaer()
+    
+  end
+  
+  # Metodo initTreasureCardDeck
+  def initTreasureCardDeck()
+    
+  end
+  
+  # Metodo initMonsterCardDeck
+  def initMonsterCardDeck()
+    
+  end
+  
+  # Metodo shuffleTreasures
+  def shuffleTreasures()
+    
+  end
+  
+  # Metodo shuffleMonsters
+  def shuffleMonsters()
     
   end
 end
