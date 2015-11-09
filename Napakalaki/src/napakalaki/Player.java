@@ -11,6 +11,9 @@ public class Player {
     private boolean dead=true;
     private boolean canISteal=true;
     
+    // Atributos obtenidos de otras clases
+    private BadConsequence pendingBadConsequence;
+    
 
 
     public Player (String name){
@@ -19,27 +22,28 @@ public class Player {
     }
 
     public String getName(){
-        return name;
+        return this.name;
     }
     
     private void bringToLife(){
-    
+        this.dead=false;
     }
     
+    // Por comprobar mas cosas
     private int getCombatLevel(){
-        return 0;
+        return this.level;
     }
     
     private void incrementLevels(int l){
-    
+        level = level + l;
     }
     
     private void decrementLevels(int l){
-    
+        level = level - l;
     }
     
     private void setPendingBadConsequence(BadConsequence b){
-    
+        pendingBadConsequence=b;
     }
     
     private void applyPrize(Monster m){
@@ -66,7 +70,7 @@ public class Player {
     
     public boolean isDead(){
     
-        return false;
+        return this.dead;
     }
     
     public Treasure getHiddenTreasures(){
