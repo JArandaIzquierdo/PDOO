@@ -109,7 +109,7 @@ public class BadConsequence {
     
     // Metodo que 
     private boolean isEmpty(){
-        
+        // Falta clase Player para usar
     }
     
     // Método toString

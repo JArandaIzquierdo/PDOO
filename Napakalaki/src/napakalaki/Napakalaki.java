@@ -19,32 +19,32 @@ public class Napakalaki {
         
     }
     
-    private void initPlayers(ArrayList<String> names);
+    //private void initPlayers(ArrayList<String> names);
     
-    private Player nextPlayer();
+    //private Player nextPlayer();
     
-    private boolean nextTurnAllowed();
+    //private boolean nextTurnAllowed();
     
-    private void setEnemies();
+    //private void setEnemies();
     
-    public static Napakalaki getInstance();
+    //public static Napakalaki getInstance();
     
-    public CombatResult developCombat();
+    //public CombatResult developCombat();
     
-    public void discardVisibleTreasures(ArrayList<Treasure> treasures);
+    //public void discardVisibleTreasures(ArrayList<Treasure> treasures);
     
-    public void discardHiddenTreasures(ArrayList<Treasure> treasures);
+    //public void discardHiddenTreasures(ArrayList<Treasure> treasures);
     
-    public void makeTreasuresVisible(ArrayList<Treasure> treasures);
+    //public void makeTreasuresVisible(ArrayList<Treasure> treasures);
     
-    public void initGame(ArrayList<String> players);
+    //public void initGame(ArrayList<String> players);
     
-    public Player getCurrentPlayer();
+    //public Player getCurrentPlayer();
     
-    public Monster getCurrentMonster();
+    //public Monster getCurrentMonster();
     
-    public boolean nextTurn();
+    //public boolean nextTurn();
     
-    public boolean endOfGame(CombatResult result);
+    //public boolean endOfGame(CombatResult result);
 
 }
