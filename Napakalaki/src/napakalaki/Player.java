@@ -189,7 +189,10 @@ public class Player {
     
     public boolean canISteal(){
     
-        return false;
+        if(canISteal==true)
+            return true;
+        else
+            return false;
     }
     
     private boolean canYouGiveMeATreasure(){
@@ -201,11 +204,7 @@ public class Player {
     */
     private void haveStolen(){
         
-        int nivel = level;
-        for (Treasure t: visibleTreasures)
-            nivel = nivel + t.getBonus();
-        
-    
+        this.canISteal=false;   
     }
     
     public void discardAllTreasures(){
