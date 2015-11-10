@@ -16,7 +16,6 @@ class Player
   
   # Consultores
   attr_reader :name # Metodo getName()
-  attr_reader :hiddenTreasures # Metodo getHiddenTreasure()
   
   # Constructor con el parametro nombre
   def initialize (name)
@@ -24,8 +23,6 @@ class Player
   end
   
   # ------------ Metodos publicos --------------------
-  # Metodo getName
- 
   
   # Metodo isDead
   def isDead()
