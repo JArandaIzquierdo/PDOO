@@ -3,11 +3,23 @@
 class Player
   
   CONST_MAXLEVEL = 10
-  def initialize(nom,nivel,muerte=true,robar=true)
-    @nombre=nom
-    @level=nivel
-    @dead=muerte
-    @canISteal=robar
+  @level
+  @name
+  @dead=true
+  @canISteal=true
+ 
+  # Atributos de referencia
+  @enemy
+  @visibleTreasure
+  @hiddenTreasures
+  @pendingBadConsequence
+  
+  
+  
+  # Constructor con el parametro nombre
+  def initialize (name)
+    @name=name
+    
   end
   
   # ------------ Metodos publicos --------------------
@@ -19,12 +31,13 @@ class Player
 
   # Metodo getName
   def getName ()
+    return name
     
   end
   
   # Metodo isDead
   def isDead()
-    
+    return dead
   end
   
   # Metodo getHiddenTreasures
