@@ -25,28 +25,50 @@ public class Player {
     
 
     }
-
+    
+    /*
+    Devuelve el nombre del jugador.
+    */
     public String getName(){
         return this.name;
     }
     
+    /*
+    Devuelve la vida al jugador, modificando el atributo correspondiente.
+    */
     private void bringToLife(){
         this.dead=false;
     }
     
-    // Por comprobar mas cosas
+    /*
+    Devuelve el nivel de combate del jugador, que viene dado por su nivel más
+    los bonus que le proporcionan los tesoros que tenga equipados, según las 
+    reglas del juego.
+    */
     private int getCombatLevel(){
-        return this.level;
+        return this.level
     }
     
+    /*
+    Incrementa el nivel del jugador en i niveles, teniendo en cuenta 
+    las reglas del juego.
+    */
     private void incrementLevels(int l){
         level = level + l;
     }
     
+    /*
+    Decrementa el nivel del jugador en i niveles, teniendo en cuenta
+    las reglas del juego.
+    */
     private void decrementLevels(int l){
         level = level - l;
     }
     
+    /*
+    Asigna el mal rollo al jugador, dándole valor a 
+    su atributo pendingBadConsequence.
+    */
     private void setPendingBadConsequence(BadConsequence b){
         pendingBadConsequence=b;
     }
@@ -73,12 +95,14 @@ public class Player {
     Cambia el estado de jugador a muerto,modificando el correspondiente atributo.
     Esto ocurre cuando el jugador, por algún motivo, ha perdido todos sus tesoros.
     */
-    private void dielfNoTreasures(){
+    private void dieIfNoTreasures(){
     
         if(visibleTreasures.isEmpty() && hiddenTreasures.isEmpty())
             dead = true;
     }
-    
+    /*
+    Devuelve true si el jugador está muerto, false en caso contrario.
+    */
     public boolean isDead(){
     
         return this.dead;
@@ -110,10 +134,17 @@ public class Player {
     public void discarHiddenTreasure(Treasure t){
     
     }
-    
+    /*
+    Devuelve true cuando el jugador no tiene ningún mal rollo que cumplir y 
+    no tiene más de 4 tesoros ocultos, y false en caso contrario. 
+    Para comprobar que el jugador no tenga mal rollo que cumplir,
+    utiliza el método isEmpty de la clase BadConsequence.
+    */
     public boolean validState(){
-        
-        return false;
+        if (pendingBadConsequence.isEmpty() && hiddenTreasures.size() < 4)
+            return true;
+        else
+            return false;
     }
     
     public void initTreasures(){
@@ -129,8 +160,11 @@ public class Player {
         return null;
     
     }
-    
+    /*
+    Asigna valor al atributo que referencia al enemigo del jugador.
+    */
     public void setEnemy(Player enemy){
+        this.enemy=enemy;
     
     }
     
