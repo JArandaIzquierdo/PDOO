@@ -14,30 +14,21 @@ class Player
   @hiddenTreasures
   @pendingBadConsequence
   
-  
+  # Consultores
+  attr_reader :name # Metodo getName()
   
   # Constructor con el parametro nombre
   def initialize (name)
     @name=name
-    
   end
   
   # ------------ Metodos publicos --------------------
-  
-  # Constructor con el parametro nombre
-  def Player (name)
-    
-  end
-
   # Metodo getName
-  def getName ()
-    return name
-    
-  end
+ 
   
   # Metodo isDead
   def isDead()
-    return dead
+    @dead
   end
   
   # Metodo getHiddenTreasures
@@ -106,70 +97,69 @@ class Player
   end
   
   # --------------- Metodos Privados ----------
-  private
   
   # Motodo bringToLife
-  def bringToLife()
+  private def bringToLife()
     
   end
   
   # Motodo getCombatLevel
-  def getCombatLevel()
+  private def getCombatLevel()
     
   end
   
   # Metodo incrementLevels
-  def incrementLevels(l)
+  private def incrementLevels(l)
     
   end
   
   # Metodo decrementLevels
-  def decrementLevels(l)
+  private def decrementLevels(l)
     
   end
   
   # Metodo setPendingBadConsequence
-  def setPendingBadConsequence(b)
+  private def setPendingBadConsequence(b)
     
   end
   
   # Metodo applyPrize
-  def applyPrize(m)
+  private def applyPrize(m)
     
   end
   
   # Metodo applyBadConsequence
-  def applyBadConsequence(m)
+  private def applyBadConsequence(m)
     
   end
   
   # Metodo canMakeTreasureVisible
-  def canMakeTreasureVisible(t)
+  private def canMakeTreasureVisible(t)
     
   end
   
   # Metodo howManyVisibleTreasures
-  def howManyVisibleTreasures(tKind)
+  private def howManyVisibleTreasures(tKind)
     
   end
   
   # Metodo dieIfNoTreasures
-  def dieIfNoTreasures()
+  private def dieIfNoTreasures()
     
   end
   
   # Metodo gifMeATreasure
-  def gifMeATreasure()
+  private def gifMeATreasure()
     
   end
   
   # Metodo canYouGiveMeATreasure
-  def canYouGiveMeATreasure()
+  private def canYouGiveMeATreasure()
     
   end
   
   # Metodo haveStolen
-  def haveStolen()
+  private def haveStolen()
     
   end
   
