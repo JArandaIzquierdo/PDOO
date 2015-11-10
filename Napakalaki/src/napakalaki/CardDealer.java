@@ -140,7 +140,7 @@ public class CardDealer {
         
         // Creación Monstruo "El gorrón en el umbral"
         badConsequence= new BadConsequence("Pierdes todos tus tesoros visibles",
-        0, 100, 0);
+        0, BadConsequence.MAXTREASURES, 0);
         prize= new Prize(3,1);
         unusedMonster.add(new Monster("El gorrón en el umbral", 10, badConsequence, prize));
         
