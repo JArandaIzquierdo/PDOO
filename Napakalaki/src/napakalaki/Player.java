@@ -13,6 +13,9 @@ public class Player {
     
     // Atributos obtenidos de otras clases
     private BadConsequence pendingBadConsequence;
+    private Treasure hiddenTreasures;
+    private Treasure visibleTreasures;
+    private Player enemy;
     
 
 
@@ -111,7 +114,7 @@ public class Player {
     
     public int getLevels(){
     
-        return 0;
+        return level;
     }
     
     public Treasure stealTreasure(){
