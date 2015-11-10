@@ -186,7 +186,10 @@ public class Player {
         
         return null;
     }
-    
+    /*
+    Devuelve true si el jugador no ha robado ningún tesoro a su enemigo y false en
+    caso contrario.
+    */
     public boolean canISteal(){
     
         if(canISteal==true)
@@ -194,10 +197,15 @@ public class Player {
         else
             return false;
     }
-    
+    /*
+    Devuelve true si el jugador tiene tesoros para ser robados por otro jugador y false
+    en caso contrario.
+    */
     private boolean canYouGiveMeATreasure(){
-    
-        return false;
+        if(!hiddenTreasures.isEmpty())
+            return true;
+        else
+            return false;
     }
     /*
     Cambia el atributo canISteal a false cuando el jugador roba un tesoro.
