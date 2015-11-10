@@ -16,7 +16,7 @@ class Player
   
   # Consultores
   attr_reader :name # Metodo getName()
-  
+  attr_reader :level # Metodo getLevel()  
   # Constructor con el parametro nombre
   def initialize (name)
     @name=name
@@ -77,6 +77,7 @@ class Player
   
   # Metodo setEnemy
   def setEnemy(enemy)
+    @enemy=enemy
     
   end
   
@@ -94,7 +95,7 @@ class Player
   
   # Motodo bringToLife
   private def bringToLife()
-    
+    @dead = false
   end
   
   # Motodo getCombatLevel
@@ -115,6 +116,7 @@ class Player
   
   # Metodo setPendingBadConsequence
   private def setPendingBadConsequence(b)
+    @pendinBadConsequence = b
     
   end
   
