@@ -46,7 +46,11 @@ public class Player {
     reglas del juego.
     */
     private int getCombatLevel(){
-        return this.level
+        int nivel = level;
+        for (Treasure t: visibleTreasures)
+            nivel = nivel + t.getBonus();
+        
+        return nivel;
     }
     
     /*
@@ -182,8 +186,15 @@ public class Player {
     
         return false;
     }
-    
+    /*
+    Cambia el atributo canISteal a false cuando el jugador roba un tesoro.
+    */
     private void haveStolen(){
+        
+        int nivel = level;
+        for (Treasure t: visibleTreasures)
+            nivel = nivel + t.getBonus();
+        
     
     }
     
