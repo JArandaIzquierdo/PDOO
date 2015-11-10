@@ -2,6 +2,7 @@ package napakalaki;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 
 /**
  *
@@ -233,11 +234,16 @@ public class CardDealer {
         prize = new Prize(1,1);
         unusedMonster.add(new Monster("Bicefalo", 20, badConsequence, prize));
     }
-    
+    /*
+    Baraja el mazo de cartas de teseros unusedTreasures
+    */
     private void shuffleTreasures(){
-    
+        
     }
     
+    /*
+    Baraja el mazo de cartas de monstruos unusedTreasures
+    */
     private void shuffleMonsters(){
     
     }
@@ -257,12 +263,20 @@ public class CardDealer {
         return null;
     }
     
+    /*
+    Introduce en el mazo de descartes de tesoros (usedTreasures) el tesoro t.
+    */
     public void giveTreasureBack(Treasure t){
-    
+        usedTreasures = new ArrayList();
+        usedTreasures.add(t);
     }
     
+    /*
+    Introduce en el mazo de descartes de monstruos (usedMonsters) al monstruo m.
+    */
     public void giveMonsterBack(Monster m){
-    
+        usedMonster = new ArrayList();
+        usedMonster.add(m);
     }
     
     public void initCards(){

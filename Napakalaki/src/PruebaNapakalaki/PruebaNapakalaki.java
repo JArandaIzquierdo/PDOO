@@ -1,13 +1,9 @@
 package PruebaNapakalaki;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import napakalaki.BadConsequence;
 import napakalaki.Monster;
 import napakalaki.Prize;
-import napakalaki.Treasure;
-import napakalaki.TreasureKind;
-import napakalaki.CardDealer;
 
 /**
  *
