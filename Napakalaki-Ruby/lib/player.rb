@@ -142,6 +142,9 @@ class Player
   
   # Metodo dieIfNoTreasures
   private def dieIfNoTreasures()
+    if(visibleTreasure.isEmpty)
+      @dead=true
+    end
     
   end
   
