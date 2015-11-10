@@ -3,6 +3,7 @@ package napakalaki;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 
 /**
  *
@@ -238,14 +239,15 @@ public class CardDealer {
     Baraja el mazo de cartas de teseros unusedTreasures
     */
     private void shuffleTreasures(){
+        Collections.shuffle(unusedTreasures);
         
     }
     
     /*
-    Baraja el mazo de cartas de monstruos unusedTreasures
+    Baraja el mazo de cartas de monstruos unusedMonster
     */
     private void shuffleMonsters(){
-    
+        Collections.shuffle(unusedMonster);
     }
     
     public static CardDealer getInstance(){
