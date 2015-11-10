@@ -1,5 +1,7 @@
 package napakalaki;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Javier
@@ -13,8 +15,8 @@ public class Player {
     
     // Atributos obtenidos de otras clases
     private BadConsequence pendingBadConsequence;
-    private Treasure hiddenTreasures;
-    private Treasure visibleTreasures;
+    private ArrayList <Treasure> hiddenTreasures = new ArrayList();
+    private ArrayList <Treasure> visibleTreasures = new ArrayList();
     private Player enemy;
     
 
@@ -67,8 +69,14 @@ public class Player {
         return 0;
     }
     
+    /*
+    Cambia el estado de jugador a muerto,modificando el correspondiente atributo.
+    Esto ocurre cuando el jugador, por algún motivo, ha perdido todos sus tesoros.
+    */
     private void dielfNoTreasures(){
     
+        if(visibleTreasures.isEmpty() && hiddenTreasures.isEmpty())
+            dead = true;
     }
     
     public boolean isDead(){
