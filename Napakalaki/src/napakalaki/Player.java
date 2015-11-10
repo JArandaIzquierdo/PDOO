@@ -89,10 +89,20 @@ public class Player {
         
         return false;
     }
+    /*
     
+    Devuelve el número de tesoros visibles de tipo tKind que tiene el jugador.
+    */
     private int howManyVisibleTreasures(TreasureKind tKind){
-    
-        return 0;
+        int numeroDeTesoros=0;// Variable para guardar el numero de tesoros 
+        
+        // Recorremos los tesoros visibles con un for
+        for(Treasure t: visibleTreasures){
+            if(t.getType() == tKind)// Si los tesoros son del tipo tKind
+                numeroDeTesoros++;// Añadimos un tesoro
+        }
+            
+        return numeroDeTesoros;
     }
     
     /*
