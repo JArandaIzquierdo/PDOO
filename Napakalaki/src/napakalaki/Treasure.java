@@ -20,14 +20,14 @@ public class Treasure {
     
     
     
-    private String getName(){
+    public String getName(){
         return name;
     }
     
-    private int getBonus(){
+    public int getBonus(){
         return bonus;
     }
-    private TreasureKind getType(){
+    public TreasureKind getType(){
         return treasure;
     }
 }
