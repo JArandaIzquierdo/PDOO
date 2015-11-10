@@ -107,12 +107,13 @@ class Player
   
   # Metodo incrementLevels
   private def incrementLevels(l)
+    level = level + l
     
   end
   
   # Metodo decrementLevels
   private def decrementLevels(l)
-    
+    level = level-l
   end
   
   # Metodo setPendingBadConsequence
