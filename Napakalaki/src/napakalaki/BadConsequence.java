@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package napakalaki;
 
 import java.util.ArrayList;
@@ -12,6 +7,8 @@ import java.util.ArrayList;
  * @author carlos
  */
 public class BadConsequence {
+    static final int MAXTREASURES=10;
+    
     // Atributos privados
     private String text;    // Mensaje de mal rollo
     private int levels;     // Level que se pierden
