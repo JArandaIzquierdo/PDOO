@@ -31,12 +31,12 @@ class CardDealer
   
   # Metodo giveTreasureBack
   def giveTreasureBack(t)
-    
+    usedTreasures.push(t)
   end
   
   # Metodo giveMonsterBack
   def giveMonsterBack(m)
-    
+    usedMonsters.push(m)
   end
   
   # Metodo 
