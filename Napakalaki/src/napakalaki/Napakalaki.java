@@ -15,36 +15,75 @@ public class Napakalaki {
     private static final Napakalaki instance = new Napakalaki();
     private CombatResult result;
     
+    //Variables de otras clases
+    private Monster currentMonster;
+    private Player currentPlayer;
+    private ArrayList <Player> players = new ArrayList();
+    
     private Napakalaki(){
         
     }
     
-    //private void initPlayers(ArrayList<String> names);
+    private void initPlayers(ArrayList<String> names){
     
-    //private Player nextPlayer();
+    }
     
-    //private boolean nextTurnAllowed();
+    private Player nextPlayer(){
+        
+        return null;
+    }
     
-    //private void setEnemies();
+    private boolean nextTurnAllowed(){
     
-    //public static Napakalaki getInstance();
+        return false;
+    }
     
-    //public CombatResult developCombat();
+    private void setEnemies(){
     
-    //public void discardVisibleTreasures(ArrayList<Treasure> treasures);
+    }
     
-    //public void discardHiddenTreasures(ArrayList<Treasure> treasures);
+    public static Napakalaki getInstance(){
+        
+        return null;
+    }
     
-    //public void makeTreasuresVisible(ArrayList<Treasure> treasures);
+    public CombatResult developCombat(){
+        return null;
+    }
     
-    //public void initGame(ArrayList<String> players);
+    public void discardVisibleTreasures(ArrayList<Treasure>treasures){
     
-    //public Player getCurrentPlayer();
+    }
     
-    //public Monster getCurrentMonster();
+    public void discardHiddenTreasures(ArrayList<Treasure>treasures){
     
-    //public boolean nextTurn();
+    }
     
-    //public boolean endOfGame(CombatResult result);
+    public void makeTreasureVisible(ArrayList<Treasure>treasure){
+    
+    }
+    
+    public void initGame(ArrayList<String>players){
+    
+    }
+    
 
+    public Player getCurrentPlayer(){
+    
+        return null;
+    }
+     public Monster getCurrentMonster(){
+     
+         return null;
+    }
+    
+    public boolean nextTurn(){
+    
+        return false;
+    } 
+    
+    public boolean endOfGame(CombatResult result){
+    
+        return false;
+    }
 }

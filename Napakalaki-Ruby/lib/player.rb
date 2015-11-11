@@ -2,7 +2,7 @@
 
 class Player
   
-  CONST_MAXLEVEL = 10
+  @@CONST_MAXLEVEL = 10
   @level
   @name
   @dead=true
@@ -11,7 +11,7 @@ class Player
   # Atributos de referencia
   @enemy
   @visibleTreasure
-  @hiddenTreasures
+  @hiddenTreasures # array.new
   @pendingBadConsequence
   
   # Consultores
@@ -60,7 +60,7 @@ class Player
   
   # Metodo validState
   def validState()
-    pendigBadConsequence.isEmpty && hiddenTreasures.length<=4 
+    @pendigBadConsequence.isEmpty && @hiddenTreasures.length<=4 
   end
   
   # Metodo initTreaures
