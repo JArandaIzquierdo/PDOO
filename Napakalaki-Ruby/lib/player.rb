@@ -11,7 +11,7 @@ class Player
   # Atributos de referencia
   @enemy
   @visibleTreasure
-  @hiddenTreasures
+  @hiddenTreasures # array.new
   @pendingBadConsequence
   
   # Consultores
@@ -59,8 +59,9 @@ class Player
   end
   
   # Metodo validState
-  def validState
-    pendigBadConsequence.isEmpty && hiddenTreasures.length<=4 
+
+  def validState()
+    @pendigBadConsequence.isEmpty && @hiddenTreasures.length<=4
   end
   
   # Metodo initTreaures
