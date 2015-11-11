@@ -3,34 +3,35 @@
 class Player
   
   CONST_MAXLEVEL = 10
-  def initialize(nom,nivel,muerte=true,robar=true)
-    @nombre=nom
-    @level=nivel
-    @dead=muerte
-    @canISteal=robar
+  @level
+  @name
+  @dead=true
+  @canISteal=true
+ 
+  # Atributos de referencia
+  @enemy
+  @visibleTreasure
+  @hiddenTreasures
+  @pendingBadConsequence
+  
+  # Consultores
+  attr_reader :name # Metodo getName()
+  attr_reader :level # Metodo getLevel()
+  attr_reader :canIsteal #Merodo canISteal()
+  
+  
+  # Constructor con el parametro nombre
+  def initialize (name)
+    @name=name
   end
   
   # ------------ Metodos publicos --------------------
   
-  # Constructor con el parametro nombre
-  def Player (name)
-    
-  end
-
-  # Metodo getName
-  def getName ()
-    
-  end
-  
   # Metodo isDead
   def isDead()
-    
+    @dead
   end
   
-  # Metodo getHiddenTreasures
-  def getHiddenTreasures()
-    
-  end
   
   # Metodo getVisibleTreasures
   def getVisibleTreasures()
@@ -59,7 +60,7 @@ class Player
   
   # Metodo validState
   def validState()
-    
+    pendigBadConsequence.isEmpty && hiddenTreasures.length<=4 
   end
   
   # Metodo initTreaures
@@ -79,6 +80,7 @@ class Player
   
   # Metodo setEnemy
   def setEnemy(enemy)
+    @enemy=enemy
     
   end
   
@@ -93,70 +95,76 @@ class Player
   end
   
   # --------------- Metodos Privados ----------
-  private
   
   # Motodo bringToLife
-  def bringToLife()
-    
+  private def bringToLife()
+    @dead = false
   end
   
   # Motodo getCombatLevel
-  def getCombatLevel()
+  private def getCombatLevel()
+    for()
     
   end
   
   # Metodo incrementLevels
-  def incrementLevels(l)
+  private def incrementLevels(l)
+    level = level + l
     
   end
   
   # Metodo decrementLevels
-  def decrementLevels(l)
-    
+  private def decrementLevels(l)
+    level = level-l
   end
   
   # Metodo setPendingBadConsequence
-  def setPendingBadConsequence(b)
+  private def setPendingBadConsequence(b)
+    @pendinBadConsequence = b
     
   end
   
   # Metodo applyPrize
-  def applyPrize(m)
+  private def applyPrize(m)
     
   end
   
   # Metodo applyBadConsequence
-  def applyBadConsequence(m)
+  private def applyBadConsequence(m)
     
   end
   
   # Metodo canMakeTreasureVisible
-  def canMakeTreasureVisible(t)
+  private def canMakeTreasureVisible(t)
     
   end
   
   # Metodo howManyVisibleTreasures
-  def howManyVisibleTreasures(tKind)
+  private def howManyVisibleTreasures(tKind)
     
   end
   
   # Metodo dieIfNoTreasures
-  def dieIfNoTreasures()
+  private def dieIfNoTreasures()
+    if(visibleTreasure.isEmpty)
+      @dead=true
+    end
     
   end
   
   # Metodo gifMeATreasure
-  def gifMeATreasure()
+  private def gifMeATreasure()
     
   end
   
   # Metodo canYouGiveMeATreasure
-  def canYouGiveMeATreasure()
-    
+  private def canYouGiveMeATreasure()
+    @hiddenTreasures.length > 0
   end
   
   # Metodo haveStolen
-  def haveStolen()
+  private def haveStolen()
+    @canISteal=false
     
   end
   

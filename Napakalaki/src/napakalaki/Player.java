@@ -1,5 +1,7 @@
 package napakalaki;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Javier
@@ -13,35 +15,64 @@ public class Player {
     
     // Atributos obtenidos de otras clases
     private BadConsequence pendingBadConsequence;
+    private ArrayList <Treasure> hiddenTreasures = new ArrayList();
+    private ArrayList <Treasure> visibleTreasures = new ArrayList();
+    private Player enemy;
     
 
 
     public Player (String name){
     
-
+        this.name= name;
     }
-
+    
+    /*
+    Devuelve el nombre del jugador.
+    */
     public String getName(){
         return this.name;
     }
     
+    /*
+    Devuelve la vida al jugador, modificando el atributo correspondiente.
+    */
     private void bringToLife(){
         this.dead=false;
     }
     
-    // Por comprobar mas cosas
+    /*
+    Devuelve el nivel de combate del jugador, que viene dado por su nivel más
+    los bonus que le proporcionan los tesoros que tenga equipados, según las 
+    reglas del juego.
+    */
     private int getCombatLevel(){
-        return this.level;
+        int nivel = level;
+        for (Treasure t: visibleTreasures)
+            nivel = nivel + t.getBonus();
+        
+        return nivel;
     }
     
+    /*
+    Incrementa el nivel del jugador en i niveles, teniendo en cuenta 
+    las reglas del juego.
+    */
     private void incrementLevels(int l){
         level = level + l;
     }
     
+    /*
+    Decrementa el nivel del jugador en i niveles, teniendo en cuenta
+    las reglas del juego.
+    */
     private void decrementLevels(int l){
         level = level - l;
     }
     
+    /*
+    Asigna el mal rollo al jugador, dándole valor a 
+    su atributo pendingBadConsequence.
+    */
     private void setPendingBadConsequence(BadConsequence b){
         pendingBadConsequence=b;
     }
@@ -58,16 +89,34 @@ public class Player {
         
         return false;
     }
+    /*
     
+    Devuelve el número de tesoros visibles de tipo tKind que tiene el jugador.
+    */
     private int howManyVisibleTreasures(TreasureKind tKind){
-    
-        return 0;
+        int numeroDeTesoros=0;// Variable para guardar el numero de tesoros 
+        
+        // Recorremos los tesoros visibles con un for
+        for(Treasure t: visibleTreasures){
+            if(t.getType() == tKind)// Si los tesoros son del tipo tKind
+                numeroDeTesoros++;// Añadimos un tesoro
+        }
+            
+        return numeroDeTesoros;
     }
     
-    private void dielfNoTreasures(){
+    /*
+    Cambia el estado de jugador a muerto,modificando el correspondiente atributo.
+    Esto ocurre cuando el jugador, por algún motivo, ha perdido todos sus tesoros.
+    */
+    private void dieIfNoTreasures(){
     
+        if(visibleTreasures.isEmpty() && hiddenTreasures.isEmpty())
+            dead = true;
     }
-    
+    /*
+    Devuelve true si el jugador está muerto, false en caso contrario.
+    */
     public boolean isDead(){
     
         return this.dead;
@@ -99,10 +148,17 @@ public class Player {
     public void discarHiddenTreasure(Treasure t){
     
     }
-    
+    /*
+    Devuelve true cuando el jugador no tiene ningún mal rollo que cumplir y 
+    no tiene más de 4 tesoros ocultos, y false en caso contrario. 
+    Para comprobar que el jugador no tenga mal rollo que cumplir,
+    utiliza el método isEmpty de la clase BadConsequence.
+    */
     public boolean validState(){
-        
-        return false;
+        if (pendingBadConsequence.isEmpty() && hiddenTreasures.size() < 4)
+            return true;
+        else
+            return false;
     }
     
     public void initTreasures(){
@@ -111,15 +167,18 @@ public class Player {
     
     public int getLevels(){
     
-        return 0;
+        return level;
     }
     
     public Treasure stealTreasure(){
         return null;
     
     }
-    
+    /*
+    Asigna valor al atributo que referencia al enemigo del jugador.
+    */
     public void setEnemy(Player enemy){
+        this.enemy=enemy;
     
     }
     
@@ -127,19 +186,33 @@ public class Player {
         
         return null;
     }
-    
+    /*
+    Devuelve true si el jugador no ha robado ningún tesoro a su enemigo y false en
+    caso contrario.
+    */
     public boolean canISteal(){
     
-        return false;
+        if(canISteal==true)
+            return true;
+        else
+            return false;
     }
-    
+    /*
+    Devuelve true si el jugador tiene tesoros para ser robados por otro jugador y false
+    en caso contrario.
+    */
     private boolean canYouGiveMeATreasure(){
-    
-        return false;
+        if(!hiddenTreasures.isEmpty())
+            return true;
+        else
+            return false;
     }
-    
+    /*
+    Cambia el atributo canISteal a false cuando el jugador roba un tesoro.
+    */
     private void haveStolen(){
-    
+        
+        this.canISteal=false;   
     }
     
     public void discardAllTreasures(){

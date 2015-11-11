@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package napakalaki;
 
 import java.util.ArrayList;
@@ -12,12 +7,15 @@ import java.util.ArrayList;
  * @author carlos
  */
 public class BadConsequence {
+    static final int MAXTREASURES=10;
+    
     // Atributos privados
     private String text;    // Mensaje de mal rollo
     private int levels;     // Level que se pierden
     private int nVisibleTreasures;  // Nº tesoros visibles que se pierden
     private int nHiddenTreasures;   // Nº tesoros ocultos que se pierden
     private boolean death;     // Indica si muere el jugador o no
+    private Player player;  //Jugador
     
     private ArrayList<TreasureKind> specificHiddenTreasures = new ArrayList();
     private ArrayList<TreasureKind> specificVisibleTreasures = new ArrayList();
@@ -108,8 +106,14 @@ public class BadConsequence {
     }
     
     // Metodo que 
-    private boolean isEmpty(){
-        // Falta clase Player para usar
+    public boolean isEmpty(){
+        boolean vacio=false;
+        if((levels==0) && (nHiddenTreasures==0) && (nVisibleTreasures==0)&& (death==false)
+                && (specificHiddenTreasures.isEmpty()) && (specificVisibleTreasures.isEmpty())
+                && (text==""))
+            vacio=true;
+        
+        return vacio;
     }
     
     // Método toString

@@ -38,7 +38,11 @@ class BadConsequence
   end
   
   def isEmpty
-    
+    if((text=="") && (levels==0) && (nVisibleTreasures==0) && (nHiddenTreasures==0) && (death==false) && (someVisibleTreasures.isEmpty) && (someHiddenTreasures.isEmpty))
+      true
+    else
+      false
+    end
   end
   
   
