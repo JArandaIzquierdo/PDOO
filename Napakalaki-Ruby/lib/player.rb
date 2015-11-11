@@ -159,7 +159,7 @@ class Player
   
   # Metodo canYouGiveMeATreasure
   private def canYouGiveMeATreasure()
-    
+    @hiddenTreasures.length > 0
   end
   
   # Metodo haveStolen
