@@ -16,7 +16,10 @@ class Player
   
   # Consultores
   attr_reader :name # Metodo getName()
-  attr_reader :level # Metodo getLevel()  
+  attr_reader :level # Metodo getLevel()
+  attr_reader :canIsteal #Merodo canISteal()
+  
+  
   # Constructor con el parametro nombre
   def initialize (name)
     @name=name
@@ -57,7 +60,7 @@ class Player
   
   # Metodo validState
   def validState()
-    
+    pendigBadConsequence.isEmpty && hiddenTreasures.length<=4 
   end
   
   # Metodo initTreaures
@@ -100,6 +103,7 @@ class Player
   
   # Motodo getCombatLevel
   private def getCombatLevel()
+    for()
     
   end
   
@@ -160,6 +164,7 @@ class Player
   
   # Metodo haveStolen
   private def haveStolen()
+    @canISteal=false
     
   end
   
