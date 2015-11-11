@@ -108,9 +108,8 @@ public class BadConsequence {
     // Metodo que 
     public boolean isEmpty(){
         boolean vacio=false;
-        if((levels==0) && (nHiddenTreasures==0) && (nVisibleTreasures==0)&& (death==false)
-                && (specificHiddenTreasures.isEmpty()) && (specificVisibleTreasures.isEmpty())
-                && (text==""))
+        if((nHiddenTreasures==0) && (nVisibleTreasures==0)&& (death==false)
+                && (specificHiddenTreasures.isEmpty()) && (specificVisibleTreasures.isEmpty()))
             vacio=true;
         
         return vacio;
