@@ -147,7 +147,12 @@ class Player
   
   # Metodo howManyVisibleTreasures
   private def howManyVisibleTreasures(tKind)
-    
+    for t in visibleTreasures
+      if(t.getType == tKind)
+        @numeroDeTesoros = @numeroDeTesoros+1
+      end
+    end
+    return numeroDeTesoros
   end
   
   # Metodo dieIfNoTreasures
@@ -165,7 +170,11 @@ class Player
   
   # Metodo canYouGiveMeATreasure
   private def canYouGiveMeATreasure
-    @hiddenTreasures.length > 0
+    if(@hiddenTreasures.isEmpty)
+      return false
+    else 
+      return true
+    end
   end
   
   # Metodo haveStolen
