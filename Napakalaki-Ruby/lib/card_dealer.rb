@@ -152,7 +152,7 @@ class CardDealer
     # El gorron en el umbral
 prize = Prize.new(3,1)
 badConsequence = BadConsequence.newLevelNumberOfTreasures("Pierdes todos tus tesoros
-visibles",BadConsequence., 0, 0)
+visibles",BadConsequence.MAXTREASURES, 0, 0)
 unusedMonsters << Monster.new("El gorron en el umbral",10,badConsequence,prize)
 
 # 3 Byakhees de bonanza

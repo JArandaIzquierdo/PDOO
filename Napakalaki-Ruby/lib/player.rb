@@ -2,7 +2,7 @@
 
 class Player
   
-  CONST_MAXLEVEL = 10
+  @@MAXLEVEL = 10
   @level
   @name
   @dead=true
@@ -28,13 +28,13 @@ class Player
   # ------------ Metodos publicos --------------------
   
   # Metodo isDead
-  def isDead()
+  def isDead
     @dead
   end
   
   
   # Metodo getVisibleTreasures
-  def getVisibleTreasures()
+  def getVisibleTreasures
     
   end
   
@@ -59,22 +59,22 @@ class Player
   end
   
   # Metodo validState
-  def validState()
+  def validState
     pendigBadConsequence.isEmpty && hiddenTreasures.length<=4 
   end
   
   # Metodo initTreaures
-  def initTreasures()
+  def initTreasures
     
   end
   
   # Metodo getLevels
-  def getLevels ()
+  def getLevels
     
   end
   
   # Metodo stealTreasure
-  def steadTreasure()
+  def steadTreasure
     
   end
   
@@ -85,25 +85,30 @@ class Player
   end
   
   # Metodo canISteal
-  def canISteal()
+  def canISteal
     
   end
   
   # Metodo discardAllTreasures
-  def discardAllTreasures()
+  def discardAllTreasures
     
   end
   
   # --------------- Metodos Privados ----------
   
   # Motodo bringToLife
-  private def bringToLife()
+  private def bringToLife
     @dead = false
   end
   
   # Motodo getCombatLevel
-  private def getCombatLevel()
-    for()
+  private def getCombatLevel
+    nivel=level
+    for t in visibleTreasures
+        nivel=nivel+t.bonus
+    end
+    
+    return nivel
     
   end
   
@@ -145,7 +150,7 @@ class Player
   end
   
   # Metodo dieIfNoTreasures
-  private def dieIfNoTreasures()
+  private def dieIfNoTreasures
     if(visibleTreasure.isEmpty)
       @dead=true
     end
@@ -153,17 +158,17 @@ class Player
   end
   
   # Metodo gifMeATreasure
-  private def gifMeATreasure()
+  private def gifMeATreasure
     
   end
   
   # Metodo canYouGiveMeATreasure
-  private def canYouGiveMeATreasure()
+  private def canYouGiveMeATreasure
     @hiddenTreasures.length > 0
   end
   
   # Metodo haveStolen
-  private def haveStolen()
+  private def haveStolen
     @canISteal=false
     
   end

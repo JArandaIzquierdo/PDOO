@@ -2,6 +2,8 @@ class BadConsequence
   
   private_class_method:new
   
+  @@MAXTREASURES=10
+  
   def initialize(aText, someLevels, someVisibleTreasures, someHiddenTreasures,
     someSpecificVisibleTreasures, someSpecificHiddenTreasures, death)
     @text=aText    # Mensaje de mal rollo
@@ -38,7 +40,7 @@ class BadConsequence
   end
   
   def isEmpty
-    if((nVisibleTreasures==0) && (nHiddenTreasures==0) && (death==false) && (someVisibleTreasures.isEmpty) && (someHiddenTreasures.isEmpty))
+    if((@nVisibleTreasures==0) && (@nHiddenTreasures==0) && (@death==false) && (@someVisibleTreasures.isEmpty) && (@someHiddenTreasures.isEmpty))
       true
     else
       false
