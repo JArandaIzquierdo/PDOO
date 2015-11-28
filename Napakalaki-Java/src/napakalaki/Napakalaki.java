@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package napakalaki;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author carlos
+ * @author Javier Aranda Izquierdo
  */
 public class Napakalaki {
     private static final Napakalaki instance = new Napakalaki();
@@ -19,6 +14,7 @@ public class Napakalaki {
     private Monster currentMonster;
     private Player currentPlayer;
     private ArrayList <Player> players = new ArrayList();
+    private CardDealer dealer;
     
     private Napakalaki(){
         
