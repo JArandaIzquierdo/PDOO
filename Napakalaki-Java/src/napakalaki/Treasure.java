@@ -2,22 +2,19 @@ package napakalaki;
 
 /**
  *
- * @author carlos
+ * @author Javier Aranda Izquierdo
  */
 public class Treasure {
     private String name;
     private int bonus;
-    private int gold_coins;
-    private TreasureKind treasure;
+    private TreasureKind type;
     
     
-    Treasure(String n, int g, int bonus1, TreasureKind t){
+    Treasure(String n, int bonus, TreasureKind t){
         name=n;
-        bonus=bonus1;
-        gold_coins=g;
-        treasure=t;
+        this.bonus=bonus;
+        type=t;
     }
-    
     
     
     public String getName(){
@@ -28,6 +25,6 @@ public class Treasure {
         return bonus;
     }
     public TreasureKind getType(){
-        return treasure;
+        return type;
     }
 }
