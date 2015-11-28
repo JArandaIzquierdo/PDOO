@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author carlos
+ * @author Javier Aranda Izquierdo
  */
 public class BadConsequence {
     static final int MAXTREASURES=10;
@@ -15,7 +15,6 @@ public class BadConsequence {
     private int nVisibleTreasures;  // Nº tesoros visibles que se pierden
     private int nHiddenTreasures;   // Nº tesoros ocultos que se pierden
     private boolean death;     // Indica si muere el jugador o no
-    private Player player;  //Jugador
     
     private ArrayList<TreasureKind> specificHiddenTreasures = new ArrayList();
     private ArrayList<TreasureKind> specificVisibleTreasures = new ArrayList();
@@ -24,58 +23,29 @@ public class BadConsequence {
     //Constructores de mal rollo
     
     //Constructor para mal rollo que especifica cuantos tesoros visibles y ocultos pierdes
-    public BadConsequence(String text, int levels, int nVisible, int nHidden){
-        setText(text);
-        setLevels(levels);
-        setNVisibleTreasures(nVisible);
-        setNHiddenTreasures(nHidden);
+    public BadConsequence(String t, int l, int nVisible, int nHidden){
+        levels=l;
+        text=t;
+        nVisibleTreasures=nVisible;
+        nHiddenTreasures=nHidden;
     }
     
     // Constructor del mal rollo si mueres
-    public BadConsequence(String text, boolean death){
-        setText(text);
-        setDeath(death);
+    public BadConsequence(String t, boolean death){
+        text=t;
+        this.death=death;
     }
     
     //Constructor para mal rollo que te quita los tipos de tesoros
-    public BadConsequence(String text, int levels, ArrayList<TreasureKind> tVisible,
-    ArrayList<TreasureKind> tHidden){
-        setText(text);
-        setLevels(levels);
-        setSpecificVisibleTreasures(tVisible);
-        setSpecificHiddenTreasures(tHidden);
+    public BadConsequence(String t, int l, ArrayList<TreasureKind> v,
+    ArrayList<TreasureKind> h){
+        text=t;
+        levels=l;
+        specificVisibleTreasures=v;
+        specificHiddenTreasures=h;
         
     }
-    
-    // Modificadores
-    private void setText(String txt){
-        text = txt;
-    }
-    
-    private void setLevels(int lv){
-        levels = lv;
-    }
-    
-    private void setNVisibleTreasures(int nvt){
-        nVisibleTreasures = nvt;
-    }
-    
-    private void setNHiddenTreasures(int nht){
-        nHiddenTreasures = nht;
-    }
-    
-    private void setDeath(boolean dth){
-        death = dth;
-    }
-    
-    private void setSpecificHiddenTreasures(ArrayList<TreasureKind> tHidden){
-        specificHiddenTreasures = tHidden;
-    }
-    
-    private void setSpecificVisibleTreasures(ArrayList<TreasureKind> tVisible){
-        specificVisibleTreasures = tVisible;
-    }
-    
+       
     // Consultores
     public String getText(){
         return text;
@@ -95,14 +65,26 @@ public class BadConsequence {
     
     public boolean getDeath(){
         return death;
+        
+    }
+    public TreasureKind getSpecificVisibleTreasures(){
+        return null;
+        
+    }
+    public TreasureKind getSpecificHiddenTreasures(){
+        return null;
     }
     
-    // Metodo que comprueba si un monstruo tiene tesoros
-    public boolean TieneTesoros(){        
-        if((!specificVisibleTreasures.isEmpty()) || (!specificVisibleTreasures.isEmpty()))
-            return true;
-        else
-            return false;
+    public void substractVisibleTreasure(Treasure t){
+    
+    }
+    
+    public void substractHiddenTreasure(Treasure t){
+    
+    }
+    
+    public BadConsequence adjusToFitTreasureLists(ArrayList<Treasure>v,ArrayList<Treasure>h){
+        return null;
     }
     
     // Metodo que 
