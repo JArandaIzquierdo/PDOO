@@ -18,7 +18,9 @@ public class Player {
     private ArrayList <Treasure> hiddenTreasures = new ArrayList();
     private ArrayList <Treasure> visibleTreasures = new ArrayList();
     private Player enemy;
-    
+    private Dice dado;
+    private CardDealer cardDealer;
+    private CombatResult combatResult;
 
 
     public Player (String name){
@@ -30,7 +32,7 @@ public class Player {
     Devuelve el nombre del jugador.
     */
     public String getName(){
-        return this.name;
+        return name;
     }
     
     /*

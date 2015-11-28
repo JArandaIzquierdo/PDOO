@@ -4,40 +4,32 @@ package napakalaki;
 
 /**
  *
- * @author Javier y Carlos 
+ * @author Javier Aranda Izquierdo
  */
 public class Prize {
     // Atributos privados
     private int treasures;
-    private int level;
+    private int levels;
     
     // Constructor y métodos públicos
-    public Prize(int treasures, int level){ //Clase Premio
-        setTreasures(treasures);    
-        setLevel(level);
+    public Prize(int t, int l){ 
+        treasures=t;    
+        levels=l;
     }
     
-    // Modificadores
-    private void setTreasures(int tr){   //Modificador de Treasures
-        treasures = tr;
-    }
-    
-    private void setLevel(int lv){   //Modificador de Level
-        level = lv;
-    }
     
     // Consultores
-    public int getTreasure(){   //Consultor de Treasures
+    public int getTreasure(){  
         return treasures;
     }
     
     public int getLevel(){  //Consultor de Level
-        return level;
+        return levels;
     }
     
     // Método toString
     @Override   //Estamos sobreescibribiendo un método padre de Java
     public String toString(){
-        return " Levels = " + Integer.toString(level) + ". Treasures = " + Integer.toString(treasures);
+        return " Levels = " + Integer.toString(levels) + ". Treasures = " + Integer.toString(treasures);
     }
 }
