@@ -2,12 +2,11 @@ package napakalaki;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 
 /**
  *
- * @author JaviAir
+ * @author Javier Aranda Izquierdo
  */
 public class CardDealer {
     private static final CardDealer instance= new CardDealer();
