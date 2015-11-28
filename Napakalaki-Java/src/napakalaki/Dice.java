@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  *
- * @author carlos
+ * @author Javier Aranda Izquierdo
  */
 public class Dice {
     private static final Dice instance= new Dice();
