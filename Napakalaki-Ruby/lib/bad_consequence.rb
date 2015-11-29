@@ -4,43 +4,41 @@ class BadConsequence
   
   @@MAXTREASURES=10
   
-  def initialize(aText, someLevels, someVisibleTreasures, someHiddenTreasures,
-    someSpecificVisibleTreasures, someSpecificHiddenTreasures, death)
-    @text=aText    # Mensaje de mal rollo
-    @levels=someLevels  # Level que se pierden
-    @nVisibleTreasures=someVisibleTreasures  # Nº tesoros visibles que se pierden
-    @nHiddenTreasures=someHiddenTreasures   # Nº tesoros ocultos que se pierden
-    
-    @someVisibleTreasures=someSpecificVisibleTreasures #Tesoro especifico visible
-    @someHiddenTreasures=someSpecificHiddenTreasures   #Tesoro especifico invisible
-    
+  def initialize(text, levels, nVisibleTreasures, nHiddenTreasures,
+    specificVisibleTreasures, specificHiddenTreasures, death)
+    @text=text    # Mensaje de mal rollo
+    @levels=levels  # Level que se pierden
+    @nVisibleTreasures=nVisibleTreasures  # Nº tesoros visibles que se pierden
+    @nHiddenTreasures=nHiddenTreasures   # Nº tesoros ocultos que se pierden
     @death=death   # Indica si muere el jugador o no
     
-   
+    @specificVisibleTreasures=specificVisibleTreasures #Tesoro especifico visible
+    @specificHiddenTreasures=specificHiddenTreasures   #Tesoro especifico invisible
+      
   end
   
   #Llama al constructor
-  def self.newLevelNumberOfTreasures (aText, someLevels,
-    someVisibleTreasures, someHiddenTreasures)
+  def self.newLevelNumberOfTreasures (text, levels,
+    nVisibleTreasures, nHiddenTreasures)
   
-    new(aText, someLevels, someVisibleTreasures, someHiddenTreasures, 0, 0, false)
+    new(text, levels, nVisibleTreasures, nHiddenTreasures, 0, 0, false)
   end
   
   #Llama al constructor
-  def self.newLevelSpecificTreasures (aText, someLevels,
-    someSpecificVisibleTreasures, someSpecificHiddenTreasures)
+  def self.newLevelSpecificTreasures (text, levels,
+    specificVisibleTreasures, specificHiddenTreasures)
   
-    new(aText, someLevels, 0, 0, someSpecificVisibleTreasures, someSpecificHiddenTreasures, false)
+    new(text, levels, 0, 0, specificVisibleTreasures, specificHiddenTreasures, false)
   end
   
   #Llama al constructor
-  def self.newDeath (aText)
+  def self.newDeath (text)
     
-    new(aText, 0, 0, 0, 0, 0, true)
+    new(text, 0, 0, 0, 0, 0, true)
   end
   
   def isEmpty
-    if((@nVisibleTreasures==0) && (@nHiddenTreasures==0) && (@death==false) && (@someVisibleTreasures.isEmpty) && (@someHiddenTreasures.isEmpty))
+    if((@nVisibleTreasures==0) && (@nHiddenTreasures==0) && (@death==false) && (@specificVisibleTreasures.isEmpty) && (@specificHiddenTreasures.isEmpty))
       true
     else
       false
@@ -48,15 +46,33 @@ class BadConsequence
   end
   
   
-  
   #Consultores
-  attr_reader:text
+  #getLevels
   attr_reader:levels
+  
+  #getNVisibleTreasures
   attr_reader:nVisibleTreasures
+  
+  #getNHiddenTreasures
   attr_reader:nHiddenTreasures
-  attr_reader:someVisibleTreasures
-  attr_reader:someHiddenTreasures
-  attr_reader:death
+  
+  #getSpecificHiddenTreasures
+  attr_reader:specificHiddenTreasures
+  
+  #getSpecificVisibleTreasures
+  attr_reader:specificVisibleTreasures
+  
+  def substractVisibleTreasure(t)
+    
+  end
+  
+  def substractHiddenTreasure(t)
+    
+  end
+  
+  def adjustToFitTreasureLists(v,h)
+    
+  end
               
   def to_s
   "Texto: #{@text} \nNiveles perdidos: #{@levels} \nTesoros visibles: #{@nVisibleTreasures} \nTesoros ocultos: #{@nHiddenTreasures}
