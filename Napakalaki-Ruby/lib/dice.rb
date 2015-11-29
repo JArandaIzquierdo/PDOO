@@ -1,12 +1,13 @@
-# Author: Carlos
+# Author: Javier Aranda Izquierdo
+module Napakalaki
+  require "singleton"
 
-require "singleton"
+  class Dice
 
-class Dice
-  
-  include Singleton
-    
-  def public nextNumber
-     rand(7)
+    include Singleton
+
+    def nextNumber
+       return 1 + rand(6)
+    end
   end
 end
