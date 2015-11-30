@@ -13,7 +13,7 @@ class Prize
   attr_reader:level # Metodo getLevels
   
   def to_s
-  "Tesoros ganados: #{@treasures} \nNiveles ganados: #{@level}"
+  "Tesoros ganados: #{@treasures} \nNiveles ganados: #{@levels}"
   end
     
 
