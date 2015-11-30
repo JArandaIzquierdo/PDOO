@@ -39,7 +39,7 @@ public class Player {
     Devuelve la vida al jugador, modificando el atributo correspondiente.
     */
     private void bringToLife(){
-        this.dead=false;
+        dead=false;
     }
     
     /*
@@ -121,7 +121,7 @@ public class Player {
     */
     public boolean isDead(){
     
-        return this.dead;
+        return dead;
     }
     
     public Treasure getHiddenTreasures(){
