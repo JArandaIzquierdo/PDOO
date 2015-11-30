@@ -1,5 +1,5 @@
 # Javier Aranda Izquierdo
-
+module NapakalakiGame
 require_relative "prize"
 require_relative "bad_consequence"
 
@@ -35,4 +35,5 @@ class Monster
   def to_s
   "Nombre monstruo: #{@name} \nNivel de combate: #{@combatLevel}"
   end  
+end
 end

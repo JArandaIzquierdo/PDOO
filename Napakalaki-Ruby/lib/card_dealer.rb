@@ -1,4 +1,5 @@
 # Autor Javier Aranda
+module NapakalakiGame
 
 require Singleton
 
@@ -279,4 +280,5 @@ class CardDealer
     
   end
   
+end
 end

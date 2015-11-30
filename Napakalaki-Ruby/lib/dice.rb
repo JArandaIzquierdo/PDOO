@@ -1,5 +1,5 @@
 # Author: Javier Aranda Izquierdo
-module Napakalaki
+module NapakalakiGame
   require "singleton"
 
   class Dice
