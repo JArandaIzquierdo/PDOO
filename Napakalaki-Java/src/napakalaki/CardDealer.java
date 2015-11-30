@@ -12,10 +12,10 @@ public class CardDealer {
     private static final CardDealer instance= new CardDealer();
     
     // Atributos de otras clases
-    private ArrayList <Monster> usedMonster;
-    private ArrayList <Monster> unusedMonster;
-    private ArrayList <Treasure> usedTreasures;
-    private ArrayList <Treasure> unusedTreasures;
+    private ArrayList <Monster> usedMonster = new ArrayList();
+    private ArrayList <Monster> unusedMonster = new ArrayList();
+    private ArrayList <Treasure> usedTreasures = new ArrayList();
+    private ArrayList <Treasure> unusedTreasures = new ArrayList();
     
     // Constructor de la clase
     private CardDealer(){
@@ -268,7 +268,6 @@ public class CardDealer {
     Introduce en el mazo de descartes de tesoros (usedTreasures) el tesoro t.
     */
     public void giveTreasureBack(Treasure t){
-        usedTreasures = new ArrayList();
         usedTreasures.add(t);
     }
     
@@ -276,7 +275,6 @@ public class CardDealer {
     Introduce en el mazo de descartes de monstruos (usedMonsters) al monstruo m.
     */
     public void giveMonsterBack(Monster m){
-        usedMonster = new ArrayList();
         usedMonster.add(m);
     }
     
