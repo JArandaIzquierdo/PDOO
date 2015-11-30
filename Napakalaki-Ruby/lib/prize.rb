@@ -1,21 +1,22 @@
-# To change this license header, choose License Headers in Project Properties.
-# To change this template file, choose Tools | Templates
-# and open the template in the editor.
+# Javier Aranda Izquierdo
+module NapakalakiGame
 
 class Prize
   
-  def initialize(treasures, level)
+  def initialize(treasures, levels)
      @treasures=treasures
-     @level=level
+     @levels=levels
   end
   
   #Consultores
-  attr_reader:treasures
-  attr_reader:level
+  attr_reader:treasures # Metodo getTreasures
+  attr_reader:level # Metodo getLevels
   
   def to_s
   "Tesoros ganados: #{@treasures} \nNiveles ganados: #{@level}"
   end
     
+
+end
 
 end
