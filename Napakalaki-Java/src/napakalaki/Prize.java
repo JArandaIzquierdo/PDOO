@@ -19,11 +19,11 @@ public class Prize {
     
     
     // Consultores
-    public int getTreasure(){  
+    public int getTreasures(){  
         return treasures;
     }
     
-    public int getLevel(){  //Consultor de Level
+    public int getLevels(){  //Consultor de Level
         return levels;
     }
     

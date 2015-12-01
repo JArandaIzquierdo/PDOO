@@ -33,11 +33,11 @@ public class Monster {
     }
     
     public int getLevelsGained(){
-        return 0;
+        return prize.getLevels();
     }
     
     public int getTreasuresGained(){
-        return 0;
+        return prize.getTreasures();
     }
     
     // Método toString
