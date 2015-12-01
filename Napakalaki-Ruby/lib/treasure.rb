@@ -10,7 +10,7 @@ class Treasure
     
     attr_reader:name
     attr_reader:bonus
-    attr_reader:treasure    
+    attr_reader:type    
     
 end
 end
