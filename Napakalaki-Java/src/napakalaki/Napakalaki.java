@@ -108,11 +108,11 @@ public class Napakalaki {
 
     public Player getCurrentPlayer(){
     
-        return null;
+        return currentPlayer;
     }
      public Monster getCurrentMonster(){
      
-         return null;
+         return currentMonster;
     }
     
     public boolean nextTurn(){
