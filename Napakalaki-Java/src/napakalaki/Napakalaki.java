@@ -70,10 +70,24 @@ public class Napakalaki {
         
         return this.currentPlayer;
     }
+    /*nextTurnAllowed()
     
+    Método que comprueba si el jugador activo (currentPlayer) cumple con las 
+    reglas del juego para poder terminar su turno. Devuelve false si el jugador
+    activo no puede pasar de turno y true en caso contrario, para ello usa el
+    método de Player validState() donde se realizan las comprobaciones 
+    pertinentes.
+    
+    */
     private boolean nextTurnAllowed(){
-    
-        return false;
+        boolean cumple;
+        if(currentPlayer== null) // Si aun no se a asignado el jugador actual
+            cumple=true;
+        else
+            // si existe el jugador actual, comprobamos si puede seguir
+            cumple=currentPlayer.validState();
+        
+        return cumple;
     }
     
     private void setEnemies(){
