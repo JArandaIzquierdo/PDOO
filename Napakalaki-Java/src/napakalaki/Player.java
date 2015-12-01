@@ -224,11 +224,12 @@ public class Player {
     
     private Treasure giveMeATreasure(){
         Random r = new Random();
-        int numeroTesorosOcultos=hiddenTreasures.size();
+        Treasure tesoro;//Tesoro que devuelve al azar
+        int numeroTesorosOcultos=hiddenTreasures.size();//Numero de tesoros que tenemos
         
+        tesoro=hiddenTreasures.get(r.nextInt(numeroTesorosOcultos));
         
-        
-        return null;
+        return tesoro;
     }
     /*
     Devuelve true si el jugador no ha robado ningún tesoro a su enemigo y false en

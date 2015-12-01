@@ -255,8 +255,32 @@ public class CardDealer {
     }
     
     public Treasure nextTreasure(){
-  
-        return null;
+        
+        //Vemos si existe alguna carta en el mazo
+        if(unusedTreasures.isEmpty()){
+            
+            //Si esta vacio copiamos las cartas al mazo sin usar
+            for (Treasure t : usedTreasures){
+                unusedTreasures.add(t);
+            }
+            
+            //Barajamos las cartas del mazo sin usar
+            shuffleTreasures();
+            
+            //Vaciamos el mazo de cartas usadas
+            usedTreasures.clear();            
+        }
+        //Cogemos la primera carta del mazo sin usar
+        Treasure tesoro=unusedTreasures.get(0);
+        
+        //La agregamos al mazo de cartas usadas
+        usedTreasures.add(tesoro);
+        
+        //La eliminamos del mazo de cartas sin usar
+        unusedTreasures.remove(tesoro);
+        
+        //Devuelve el siguiente tesoro del mazo de tesoros
+        return tesoro;
     }
     
     public Monster nextMonster(){

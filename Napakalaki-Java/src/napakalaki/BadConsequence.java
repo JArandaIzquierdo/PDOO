@@ -76,6 +76,7 @@ public class BadConsequence {
     
     public void substractVisibleTreasure(Treasure t){
     
+            
     }
     
     public void substractHiddenTreasure(Treasure t){
