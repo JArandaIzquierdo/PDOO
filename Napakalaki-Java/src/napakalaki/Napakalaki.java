@@ -91,7 +91,13 @@ public class Napakalaki {
     }
     
     private void setEnemies(){
-    
+        
+        Random r=new Random();
+        int numeroJugadores=players.size();//Miramos el numero de jugadores que hay
+        
+        Player enemigo= players.get(r.nextInt(numeroJugadores));
+        
+        //FALTA PARTE POR RESOLVER
     }
     
     public static Napakalaki getInstance(){
@@ -135,7 +141,9 @@ public class Napakalaki {
     } 
     
     public boolean endOfGame(CombatResult result){
-    
-        return false;
+        if(result == CombatResult.WINGAME)
+            return true;
+        else
+            return false;
     }
 }
