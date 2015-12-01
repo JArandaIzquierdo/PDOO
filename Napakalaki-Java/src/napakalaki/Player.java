@@ -1,6 +1,7 @@
 package napakalaki;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  *
@@ -86,11 +87,48 @@ public class Player {
     private void applyBadConsequence(Monster m){
     
     }
-    
+    /* Comprueba si un tesoro oculto t puede pasar a se visible
+    */
     private boolean canMakeTreasureVisible(Treasure t){
         
-        return false;
+        TreasureKind tipo;
+        boolean resultado=false;
+        
+        // Primero comprobamos que no tenga mas de 4 tesoros visibles
+        if(visibleTreasures.size() < 4){
+            tipo=t.getType();
+            
+            //-----------------------------------ONEHAND-------------------------- 
+            if(tipo == TreasureKind.ONEHAND){
+                
+                //Si estamos equipado con un tesoro de 2 manos, no se puede agregar
+                if (tesoroUtilizandose(TreasureKind.BOTHHANDS)) {
+                        resultado = false;
+                        
+                } else {
+                    
+                    // Comprobamos cuantos tesoros de una mano tenemos
+                    int i = 0;
+                    for (Treasure tesoro : this.visibleTreasures) {
+                        if (tesoro.getType().equals(TreasureKind.ONEHAND)) {
+                            i++;
+                        }
+                    }
+                    if(i==2){
+                        resultado=false;
+                    }
+                    else
+                        resultado=true;
+                }
+            }
+            
+            // --------------------- LOS DEMAS CASOS---------------------------
+            resultado=!tesoroUtilizandose(tipo);
+        
+        }
+        return resultado;
     }
+    
     /*
     
     Devuelve el número de tesoros visibles de tipo tKind que tiene el jugador.
@@ -185,6 +223,10 @@ public class Player {
     }
     
     private Treasure giveMeATreasure(){
+        Random r = new Random();
+        int numeroTesorosOcultos=hiddenTreasures.size();
+        
+        
         
         return null;
     }
@@ -220,6 +262,22 @@ public class Player {
     public void discardAllTreasures(){
     
     
+    }
+    
+    //Metodo que comprueba si un Tipo de Tesoro está en uso
+    private boolean tesoroUtilizandose(TreasureKind type) {
+        boolean result = false;
+        for (Treasure tv : this.visibleTreasures) {
+
+            if (type.equals(tv.getType())) {
+
+                result = true;
+                break;
+
+            }
+
+        }
+        return result;
     }
         
     
