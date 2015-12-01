@@ -13,7 +13,7 @@ public class Napakalaki {
     //Variables de otras clases
     private Monster currentMonster;
     private Player currentPlayer;
-    private ArrayList <Player> players = new ArrayList();
+    private ArrayList <Player> players;
     private CardDealer dealer;
     
     private Napakalaki(){
@@ -21,7 +21,14 @@ public class Napakalaki {
     }
     
     private void initPlayers(ArrayList<String> names){
-    
+        //Creamos un vector de jugadores
+        players=new ArrayList();
+        
+        //Recorremos el vector names pasado por parametro e insertamos los 
+        //nombres en el vector players
+        for(String s : names){
+            players.add(new Player(s));
+        }
     }
     
     private Player nextPlayer(){
