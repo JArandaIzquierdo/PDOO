@@ -1,6 +1,7 @@
 package napakalaki;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  *
@@ -33,7 +34,41 @@ public class Napakalaki {
     
     private Player nextPlayer(){
         
-        return null;
+        int numeroJugadores = players.size();// Numero de jugadores
+        int siguienteIndice;// Nos dice el indice del siguiente jugador
+        int indiceActual;// Indice del jugador actual
+        Player nextPlayer;
+        
+        // Si es la primera vez que se juaga, el jugador actual no se sabe
+        if(currentPlayer == null){
+            
+            //Creamos una variable random que elija uno aleatoriamente entre los que hay
+            Random r = new Random();
+            
+            siguienteIndice = r.nextInt(numeroJugadores);
+           
+        }
+        else{
+            // Obtenemos el indice del jugador actual
+            indiceActual=players.indexOf(currentPlayer);
+            
+            // Si el jugador actual es el ultimo del index volvemos al primero
+            if(indiceActual == players.size()-1){
+                siguienteIndice=0;
+            }
+            // si no es el ultimo, el siguiente es el actual +1
+            else{
+                siguienteIndice=indiceActual + 1;
+            }
+        }
+        
+        //Cogemos al jugador correspondiente al indice
+        nextPlayer= players.get(siguienteIndice);
+        
+        //Decimos quien es el siguiente jugador
+        this.currentPlayer=nextPlayer;
+        
+        return this.currentPlayer;
     }
     
     private boolean nextTurnAllowed(){
