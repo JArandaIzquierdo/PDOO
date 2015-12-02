@@ -174,11 +174,40 @@ public class Player {
     
     public CombatResult combat(Monster m){
         
+        CombatResult result;
+        int myLevel=getCombatLevel();
+        int monsterLevel=m.getCombatLevel();
+        
+        //Si mi nivel es mayor que el del monstruo
+        if(myLevel>monsterLevel){
+            
+            //Aplicamos el premio
+            applyPrize(m);
+            
+            //si mi nivel es mayor que el maximo, he ganado la partida
+            if(this.level >MAXLEVEL)
+                result=combatResult.WINGAME;
+            // Si no, he ganado el turno
+            else
+                result=combatResult.WIN;
+        }
+        //Si mi nivel no es mayor que el del monstruo
+        else{
+            applyBadConsequence(m);
+            result=combatResult.LOSE;
+        }
+        
         return null;
     }
     
     public void makeTreasureVisible(Treasure t){
     
+        boolean canI=canMakeTreasureVisible(t);
+        
+        if(canI){
+            visibleTreasures.add(t);
+            hiddenTreasures.remove(t);
+        }
     }
     
     public void discardVisibleTreasure(Treasure t){

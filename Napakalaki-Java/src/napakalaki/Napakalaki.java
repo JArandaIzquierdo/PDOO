@@ -106,7 +106,9 @@ public class Napakalaki {
     }
     
     public CombatResult developCombat(){
-        return null;
+        
+        CombatResult combat=currentPlayer.combat(currentMonster);
+        return combat;
     }
     
     public void discardVisibleTreasures(ArrayList<Treasure>treasures){
@@ -122,8 +124,10 @@ public class Napakalaki {
     
     }
     
-    public void makeTreasureVisible(ArrayList<Treasure>treasure){
-    
+    public void makeTreasureVisible(ArrayList<Treasure>treasures){
+        
+        for(Treasure t:treasures)
+            this.currentPlayer.makeTreasureVisible(t);
     }
     
     public void initGame(ArrayList<String>players){
