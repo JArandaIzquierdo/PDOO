@@ -148,7 +148,24 @@ public class Napakalaki {
     
     public boolean nextTurn(){
     
-        return false;
+        boolean stateOk=nextTurnAllowed();
+        if(stateOk){
+            //Elegimos el monstruo
+            currentMonster=dealer.nextMonster();
+            
+            //Eleigimos cual sera el siguiente jugador
+            currentPlayer=nextPlayer();
+            
+            //Comprobamos si el jugador esta muerto o no 
+            boolean dead=currentPlayer.isDead();
+            
+            //Si esta muerto....
+            if(dead){
+                //Iniciamos sus tesoros
+                currentPlayer.initTreasures();
+            }
+        }
+        return stateOk;
     } 
     
     public boolean endOfGame(CombatResult result){
