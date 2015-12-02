@@ -81,7 +81,22 @@ public class Player {
     }
     
     private void applyPrize(Monster m){
-    
+        //Niveles ganados
+        int nLevels=m.getLevelsGained();
+        
+        incrementLevels(nLevels);
+        
+        //Numero de tesoros ganados
+        int nTreasures=m.getTreasuresGained();
+        
+        if(nTreasures>0){
+            CardDealer dealer = CardDealer.getInstance();
+            
+            for(int i=1;i<=nTreasures;i++){
+                Treasure t = dealer.nextTreasure();
+                this.hiddenTreasures.add(t);
+            }   
+        }
     }
     
     private void applyBadConsequence(Monster m){
