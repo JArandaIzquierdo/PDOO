@@ -303,7 +303,11 @@ public class CardDealer {
     }
     
     public void initCards(){
-    
+        //Inicializamos la baraja de Tesoros
+        initTreasureCardDeck();
+        
+        //Inicializamos la baraja de Monstruos
+        initMonsterCardDeck();
     }
     
     

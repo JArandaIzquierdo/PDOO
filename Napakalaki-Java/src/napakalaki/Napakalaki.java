@@ -123,6 +123,17 @@ public class Napakalaki {
     
     public void initGame(ArrayList<String>players){
     
+        //Creamos los jugadores
+        initPlayers(players);
+        
+        //Asignamos un enemigo a cada jugador
+        setEnemies();
+        
+        //Decimos quien jugara en el siguiente turno
+        nextTurn();
+        
+        //Inicializamos las barajas de cartas
+        dealer.initCards();
     }
     
 
