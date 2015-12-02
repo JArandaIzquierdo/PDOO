@@ -182,7 +182,16 @@ public class Player {
     }
     
     public void discardVisibleTreasure(Treasure t){
-    
+        //Eliminamos el tesoro visible t
+        visibleTreasures.remove(t);
+        
+        //Si el mal rollo pendiente no es null y no esta vacio
+        if(pendingBadConsequence!= null && !pendingBadConsequence.isEmpty())
+            //Substraemos el tesoto visible del mal rollo pendiente
+            pendingBadConsequence.substractVisibleTreasure(t);
+        
+        //Volvemos a comprobar si no tiene tesoros
+        dieIfNoTreasures();
     }
     
     public void discarHiddenTreasure(Treasure t){
