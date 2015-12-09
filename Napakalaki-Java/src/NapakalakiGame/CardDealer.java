@@ -304,10 +304,10 @@ public class CardDealer {
     
     public void initCards(){
         //Inicializamos la baraja de Tesoros
-        initTreasureCardDeck();
+        this.initTreasureCardDeck();
         
         //Inicializamos la baraja de Monstruos
-        initMonsterCardDeck();
+        this.initMonsterCardDeck();
     }
     
     

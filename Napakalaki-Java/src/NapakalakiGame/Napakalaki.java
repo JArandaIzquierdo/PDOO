@@ -8,7 +8,7 @@ import java.util.Random;
  * @author Javier Aranda Izquierdo
  */
 public class Napakalaki {
-    private static final Napakalaki instance = new Napakalaki();
+    private static Napakalaki instance = new Napakalaki();
     private CombatResult result;
     
     //Variables de otras clases
@@ -93,16 +93,25 @@ public class Napakalaki {
     private void setEnemies(){
         
         Random r=new Random();
-        int numeroJugadores=players.size();//Miramos el numero de jugadores que hay
+        Player enemy_set=players.get(r.nextInt(players.size()));
         
-        Player enemigo= players.get(r.nextInt(numeroJugadores));
-        
-        //FALTA PARTE POR RESOLVER
+        for(Player p:players){
+            while(p==enemy_set){
+                enemy_set=players.get(r.nextInt(players.size()));
+            }
+            
+            p.setEnemy(enemy_set);
+            
+        }
     }
     
     public static Napakalaki getInstance(){
         
-        return null;
+        if (instance == null) {
+            instance = new Napakalaki();
+        }
+        return instance;
+    
     }
     
     public CombatResult developCombat(){
@@ -133,16 +142,16 @@ public class Napakalaki {
     public void initGame(ArrayList<String>players){
     
         //Creamos los jugadores
-        initPlayers(players);
+        this.initPlayers(players);
         
         //Asignamos un enemigo a cada jugador
-        setEnemies();
+        this.setEnemies();
+                
+        //Inicializamos las barajas de cartas
+        dealer.initCards();
         
         //Decimos quien jugara en el siguiente turno
         nextTurn();
-        
-        //Inicializamos las barajas de cartas
-        dealer.initCards();
     }
     
 
