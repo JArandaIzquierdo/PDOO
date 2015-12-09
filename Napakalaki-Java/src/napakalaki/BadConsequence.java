@@ -85,8 +85,50 @@ public class BadConsequence {
     
     public BadConsequence adjusToFitTreasureLists(ArrayList<Treasure>v,ArrayList<Treasure>h){
         
+        //variable de mal rollo que vamos a devolver segun nuestros tesoros
+        BadConsequence malRollo;
         
-        return null;
+        if(nVisibleTreasures!=0 || nHiddenTreasures!=0){    // Caso de que quiten nº de tesoros
+            int nV;
+            int nH;
+            
+            
+            //Ajustamos segun el tamaño de los visibles
+            if(nVisibleTreasures>v.size())
+                nV=v.size();
+            else
+                nV=nVisibleTreasures;
+            
+            //Ajustamos segun el tamaño de los no visibles
+            if(nHiddenTreasures>h.size())
+                nH=h.size();
+            else
+                nH=nHiddenTreasures;
+            
+            
+            malRollo=new BadConsequence(this.text, 0, nV, nH);
+            
+        }else{  //Caso de que quiten tesoros especificos
+                ArrayList<TreasureKind> arr_nV= new ArrayList();
+                ArrayList<TreasureKind> arr_nH= new ArrayList();
+                
+                for(Treasure t: v){
+                    arr_nV.add(t.getType());   
+                }
+                
+                for(Treasure t: h){
+                    arr_nH.add(t.getType());
+                }
+                
+                arr_nV.retainAll(specificVisibleTreasures);
+                    
+                arr_nH.retainAll(specificHiddenTreasures);
+                
+                
+                malRollo=new BadConsequence(this.text, 0, arr_nV, arr_nH);
+            }
+    
+        return malRollo;
     }
     
     // Metodo que 
