@@ -101,6 +101,15 @@ public class Player {
     
     private void applyBadConsequence(Monster m){
     
+        BadConsequence badConsequence = m.getBadConsequence();
+        
+        int nLevels=badConsequence.getLevels();
+        
+        this.decrementLevels(nLevels);
+        
+        BadConsequence pendingBad = badConsequence.adjustToFitTreasureLists(this.visibleTreasures, this.hiddenTreasures);
+
+        this.setPendingBadConsequence(pendingBad);
     }
     /* Comprueba si un tesoro oculto t puede pasar a se visible
     */
@@ -264,7 +273,25 @@ public class Player {
     }
     
     public Treasure stealTreasure(){
-        return null;
+        
+        Treasure treasure=null;
+        boolean canI=this.canISteal();
+       
+        //Comprobamos si podemos robar un tesoro (solo una vez en la partida)
+        if(canI){
+            
+            boolean canYou=enemy.canYouGiveMeATreasure();
+            //Comprobamos que el enemigo tenga tesoros ocultos para robar
+            if(canYou){
+                //Robamos un tesoro al enemigo 
+                treasure=enemy.giveMeATreasure();
+                //Lo añadimos a la lista de tesoros ocultos
+                hiddenTreasures.add(treasure);
+                //Indicamos que ya hemos robado en esta partida
+                this.haveStolen();
+            }
+        }
+        return treasure;
     
     }
     /*
