@@ -264,7 +264,33 @@ public class Player {
     }
     
     public void initTreasures(){
-    
+        //Creamos una instancia de Dealer
+        CardDealer dealer = CardDealer.getInstance();
+        //Creamos una instancia de dado
+        Dice dice = Dice.getInstance();
+        
+        this.bringToLife();
+        //Pedimos un tersoro a Dealer
+        Treasure treasure = dealer.nextTreasure();
+        
+        //Añadimos ese tesoro a los tesoros escondidos del jugador
+        hiddenTreasures.add(treasure);
+        
+        //Pedimos otro numero al dado
+        int number= dice.nextNumber();
+        
+        //Si el numero que nos da el dado es mayor que 1
+        if(number > 1){
+            //Añadimos otro tesoro
+            treasure=dealer.nextTreasure();
+            hiddenTreasures.add(treasure);
+        }
+        //Si el numero que nos da el dado es 6
+        if(number == 6){
+            //Añadimos otro tesoro
+            treasure=dealer.nextTreasure();
+            hiddenTreasures.add(treasure);
+        }
     }
     
     public int getLevels(){
