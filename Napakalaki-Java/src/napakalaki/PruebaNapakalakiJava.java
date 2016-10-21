@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package napakalaki.java;
+package napakalaki;
 
 /**
  *
  * @author JaviAir
  */
-public class NapakalakiJava {
+public class PruebaNapakalakiJava {
 
     /**
      * @param args the command line arguments
