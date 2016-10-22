@@ -37,7 +37,7 @@ public class Monster {
     }
     
     public String toString(){
-        return "Nombre = " + (name) + " Nivel de combate = " + Integer.toString(combatLevel);
+        return "Nombre = " + (name) + ", Nivel de combate = " + Integer.toString(combatLevel);
     }
     
 }

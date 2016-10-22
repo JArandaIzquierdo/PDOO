@@ -56,10 +56,10 @@ public class BadConsequence {
     }
 
     public String toString(){
-         return " Texto = " + text + "Niveles = " + Integer.toString(levels)
-                 + "Tesoros Visibles = " + Integer.toString(nVisibleTreasures)
-                 + "Tesoros ocultos = " + Integer.toString(nHiddenTreasures)
-                 + "Muerte = " + death;
+         return " Texto = " + text + ", Niveles = " + Integer.toString(levels)
+                 + ", Tesoros Visibles = " + Integer.toString(nVisibleTreasures)
+                 + ", Tesoros ocultos = " + Integer.toString(nHiddenTreasures)
+                 + ", Muerte = " + death;
      }
     
 }
