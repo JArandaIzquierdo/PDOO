@@ -20,7 +20,7 @@ public class Sorpresa {
 
     @Override
     public String toString(){
-        return "Sorpresa{" + "Texto: " + texto + ", valor: " + 
-                Integer.toString(valor) + ", tipo: " + tipo + "}";
+        return "Sorpresa ->" + "Texto: " + texto + ", Valor: " + 
+                Integer.toString(valor) + ", Tipo: " + tipo + "}";
                 }
     }
