@@ -23,4 +23,13 @@ public class Sorpresa {
         return "Sorpresa ->" + "Texto: " + texto + ", Valor: " + 
                 Integer.toString(valor) + ", Tipo: " + tipo + "}";
                 }
+  
+    public int getValor(){
+        return valor;
     }
+    
+    public TipoSorpresa getTipo(){
+        return tipo;
+    }
+    
+}
